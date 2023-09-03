@@ -1,0 +1,229 @@
+characters={ 
+    PRK_party={
+        name=PRK_party
+        portraits={
+            army={
+                large=gfx/leaders/SOV/portrait_SOV_supreme_soviet.dds
+            }
+        }
+        country_leader={
+            ideology=juche_idea
+            expire="1985.8.16"
+        }
+    }
+    PRK_Kim_Il_Sung={
+        name=PRK_Kim_Il_Sung
+        portraits={
+            army={
+                small=gfx/interface/ideas/PRK/idea_PRK_Kim_Ilsung.dds
+                large=gfx/leaders/KOR/Portrait_Kim_Ilsung.dds
+            }
+        }
+        field_marshal={
+            traits={ infantry_officer commando }
+            skill=3
+            attack_skill=4
+            defense_skill=2
+            planning_skill=3
+            logistics_skill=5
+        }
+        country_leader={
+            ideology=juche_idea
+            expire="1985.8.16"
+        }
+        advisor={
+			slot = political_advisor
+			idea_token = kim_ilsung
+            can_be_fired = no
+			available = {
+			}
+			allowed = {
+				original_tag = PRK
+			}
+			traits = {
+				PRK_prime_minister 
+			}
+			do_effect = {
+				NOT = {
+					has_government = communism 
+				}
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+    }
+    PRK_ryu_kyung_su = {
+        portraits={
+			army={
+
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=0
+		}
+    }
+    PRK_lee_hyung_sang = {
+        portraits={
+			army={
+
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=0
+		}
+    }
+    PRK_kim_mu_jeong = {
+        portraits={
+			army={
+
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=0
+		}
+    }
+    PRK_Kang_Gun = {
+        portraits={
+			army={
+				large = GFX_kang_gun
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=0
+		}
+    }
+    PRK_kim_book = {
+        portraits={
+			army={
+
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=0
+		}
+    }
+    PRK_hosan = {
+        portraits={
+			army={
+
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=0
+		}
+    }
+    PRK_wonbong_kim = {
+        portraits={
+			army={
+				large=GFX_bong
+			}
+		}
+		field_marshal={
+			traits={ armor_officer offensive_doctrine war_hero brilliant_strategist trait_reckless }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+    }
+    PRK_dongyu = {
+        portraits={
+			army={
+
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+    }
+    PRK_changryong = {
+        portraits={
+			army={
+
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+    }
+    PRK_changbong = {
+        portraits={
+			army={
+				large = GFX_changbong
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+    }
+    PRK_ojinu = {
+        portraits={
+			army={
+
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+    }
+}

@@ -1,0 +1,53 @@
+leader_traits = {
+	japans_shogun = {
+		random = no
+	}
+	blue_eyes_white_shogun = {
+	}
+	supreme_allied_commander = {
+		political_power_factor = 0.25
+		democratic_drift = 0.02
+	}
+	white_denno = {
+		political_power_factor = 0.05
+	}
+	viceroy = {
+		random = no
+		consumer_goods_factor = -0.05
+		cic_to_overlord_factor = 0.75
+		mic_to_overlord_factor = 0.75
+		extra_trade_to_overlord_factor = 0.25
+		master_ideology_drift = 0.05
+		autonomy_gain_trade_factor = -0.75
+		autonomy_manpower_share = -1
+	}
+	vietnam_activist = {
+		random = no
+		ai_join_ally_desire_factor = -100000
+		ai_get_ally_desire_factor = -100000
+	}
+	##### IDEA TRAITS ##### 
+	PRK_prime_minister_for_leader = {
+		random = no
+		sprite = 13
+		political_power_gain = 0.2
+		opinion_gain_monthly_same_ideology = 10
+	}
+	PRK_prime_minister = {
+		random = no
+		# Boosts Communism
+		sprite = 13
+		communism_drift = 0.2
+		political_power_gain = 0.2
+		trade_opinion_factor = 0.25
+		opinion_gain_monthly_same_ideology = 10
+		can_be_fired = no
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	
+}

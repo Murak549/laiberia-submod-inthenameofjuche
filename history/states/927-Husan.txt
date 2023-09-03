@@ -1,0 +1,28 @@
+state={
+	id=927
+	name="STATE_927"
+	history={
+	    victory_points = {
+			4056 5 # 3
+		}
+		owner = JAP
+		buildings = {
+			infrastructure = 3
+			dockyard = 1
+            4056 = {
+				naval_base = 4 # 3
+
+			}
+		  
+		}
+		add_core_of = KOR
+
+	}
+	provinces={
+		4056 
+	}
+	manpower=1437570
+	buildings_max_level_factor=1.000
+	state_category=town # large_city
+	local_supplies=0.000
+}

@@ -1,0 +1,131 @@
+﻿capital = 527
+
+recruit_character = PRK_party
+recruit_character = PRK_ivan
+recruit_character = PRK_Kim_Il_Sung
+recruit_character = PRK_ryu_kyung_su
+recruit_character = PRK_lee_hyung_sang
+recruit_character = PRK_kim_mu_jeong
+recruit_character = PRK_kim_book
+recruit_character = PRK_Kang_Gun
+recruit_character = PRK_hosan
+recruit_character = PRK_wonbong_kim
+recruit_character = PRK_dongyu
+recruit_character = PRK_changryong
+recruit_character = PRK_ojinu
+
+set_stability = 0.6 #baseline, THE EMPEROR KIM IL-SUNG PROTECTS
+set_war_support = 0.8
+
+set_research_slots = 3
+set_fuel_ratio = 1.0
+add_ideas = {
+}
+
+
+set_technology = {
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+}
+
+set_convoys = 400
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	communism = 43
+	democratic = 30
+	fascism = 7
+	neutrality = 20
+}
+
+1949.4.29 = {
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+		}
+		set_technology = {
+			basic_medium_tank_chassis = 1
+		}
+		set_oob = "PRK_1950_nsb"
+		else = {
+			set_oob = "LUX_1936_nsb" #Sex With Hitler
+		}
+	}
+	set_technology = {
+		basic_train = 1
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		improved_infantry_weapons = 1
+		improved_infantry_weapons_2 = 1
+		infantry_at = 1
+		infantry_at2 = 1
+		advanced_infantry_weapons = 1
+		advanced_infantry_weapons2 = 1
+		tech_mountaineers = 1
+		tech_mountaineers2 = 1
+		night_vision = 1
+		support_weapons = 1
+		support_weapons2 = 1
+		support_weapons3 = 1
+		support_weapons4 = 1
+		motorised_infantry = 1
+		armored_car1 = 1
+		armored_car2 = 1
+		tech_support = 1		
+		tech_engineers = 1
+		motorised_infantry = 1
+		marines  = 1
+		gw_artillery = 1
+		interwar_artillery = 1
+		artillery1 = 1
+		artillery2 = 1
+		artillery3 = 1
+		artillery4 = 1
+		artillery5 = 1
+		mountain_gun = 1
+		rocket_artillery = 1
+		rocket_artillery2 = 1
+		rocket_artillery3 = 1
+		antiair1 = 1
+		antiair2 = 1
+		antiair3 = 1
+		antiair4 = 1
+		interwar_antitank = 1
+		antitank1 = 1
+		antitank2 = 1
+		antitank3 = 1
+	}
+}
+	
+1949.11.1 = {
+	complete_national_focus = PRK_north_Korea_5_province_meeting_convened
+	complete_national_focus = PRK_soviet_unions_choose
+	complete_national_focus = PRK_speech_of_ilsung
+	complete_national_focus = PRK_establishment_of_the_provisional_peoples_committee_of_north_korea
+	complete_national_focus = PRK_land_revolution
+	complete_national_focus = PRK_soviet_style_personnel_system
+	complete_national_focus = PRK_peoples_army_of_korea
+}
+
+1953.11.11 = {
+	complete_national_focus = PRK_supreme_assembly
+	complete_national_focus = PRK_one_korea_one_party
+	complete_national_focus = PRK_peoples_army_of_korea2
+	complete_national_focus = PRK_founding_democratic_peoples_republic_of_korea
+	complete_national_focus = PRK_ready_to_roll_out
+	complete_national_focus = PRK_lead_of_ilsung
+	complete_national_focus = PRK_triumph_at_korea
+}
