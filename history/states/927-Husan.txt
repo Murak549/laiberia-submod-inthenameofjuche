@@ -5,7 +5,7 @@ state={
 	    victory_points = {
 			4056 5 # 3
 		}
-		owner = JAP
+		owner = PRK
 		buildings = {
 			infrastructure = 3
 			dockyard = 1
@@ -15,7 +15,9 @@ state={
 			}
 		  
 		}
+		add_core_of = PRK
 		add_core_of = KOR
+		add_claim_of = JAP
 
 	}
 	provinces={
