@@ -1,0 +1,289 @@
+ideas = {
+	country = {
+	
+		en_svensk_tiger = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+			
+			modifier = {
+				drift_defence_factor = 0.1
+				enemy_justify_war_goal_time = 0.1
+			}
+		}
+		
+	idea_swe_gustaf = {
+			picture = portrait_SWE_gustaf_V
+			allowed = {
+				 original_tag = SWE
+			}
+			allowed_civil_war = {
+				NOT ={
+					has_government = communism
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			available = {
+			  OR = {
+			   has_government = democratic
+			   }
+			}
+			removal_cost = -1
+			
+			traits = { popular_figurehead }
+        }
+	
+	   NORSWE_idea_sweden_norway_kingdom = {
+			picture = SWE_ideas_SWENOR_yeah
+			allowed = {
+			     OR = {
+				 original_tag = SWE
+				 original_tag = NOR
+				 }
+			}
+			allowed_civil_war = {
+			}
+			available = {
+			NOR = { is_subject_of = SWE }
+			}
+			removal_cost = -1
+			
+			modifier = { 
+			political_power_gain = 0.2
+			}
+        }
+		
+		NORSWE_idea_our_bad_1 = {
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = {
+			     OR = {
+				 original_tag = SWE
+				 original_tag = NOR
+				 }
+			}
+			allowed_civil_war = {
+			}
+			available = {
+			NOR = { is_subject_of = SWE }
+			}
+			removal_cost = -1
+			
+			modifier = { 
+			political_power_factor = -0.5
+			stability_factor = -0.35
+			trade_laws_cost_factor = 0.15
+			mobilization_laws_cost_factor = 0.15
+			economy_cost_factor = 0.15
+			autonomy_gain = 1
+			}
+        }
+		
+		NORSWE_idea_our_bad_2 = {
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = {
+			     OR = {
+				 original_tag = SWE
+				 original_tag = NOR
+				 }
+			}
+			allowed_civil_war = {
+			}
+			available = {
+			NOR = { is_subject_of = SWE }
+			}
+			removal_cost = -1
+			
+			modifier = { 
+			political_power_factor = -0.5
+			stability_factor = -0.35
+			trade_laws_cost_factor = 0.15
+			mobilization_laws_cost_factor = 0.15
+			economy_cost_factor = 0.15
+			}
+        }
+	
+	}
+
+	tank_manufacturer = { 
+		
+		designer = yes
+		
+		landsverk = {
+			
+			picture = generic_tank_manufacturer_2
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { tank_manufacturer }
+			
+			modifier = {
+				# notable tanks L-120 and L-60, lighter tanks as well as the medium tank Stridsvagn m/42, that was mobile and well protected.
+			}
+		}
+
+	}
+	
+	naval_manufacturer = { 
+			
+		designer = yes
+		
+		marinvarkstaderna = { #Karlskrona
+			
+			picture = generic_naval_manufacturer_1
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				# mer research
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		gotaverken = {
+			
+			picture = generic_naval_manufacturer_2
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				# worlds biggest shipyard by launched gross tonnes
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		kockums = {
+			
+			picture = generic_naval_manufacturer_3
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			 
+			equipment_bonus = {
+				# submarines and battleships
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+
+
+	materiel_manufacturer = {
+		
+		designer = yes
+	
+		bofors = {
+			
+			picture = generic_artillery_manufacturer_1
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			equipment_bonus = {
+				artillery = {
+					reliability = 0.20
+				}
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+			}
+		}
+	
+		husqvarna = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			equipment_bonus = {
+				# rifles and pistols
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+		scania = {
+			
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = {
+				# more info
+			}
+		}
+		
+	}
+}

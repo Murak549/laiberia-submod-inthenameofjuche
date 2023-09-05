@@ -1,0 +1,6 @@
+JAP_kwantung = {
+	priority = 100
+	allowed = {
+		original_tag = JAP
+	}
+}

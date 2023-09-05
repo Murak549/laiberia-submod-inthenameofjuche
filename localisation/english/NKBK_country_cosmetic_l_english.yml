@@ -59,3 +59,5 @@
  JAP_SOV_communism_autonomy_puppet:0 "$OVERLORDADJ$ 점령하 일본"
  JAP_SOV_communism_autonomy_puppet_DEF:0 "the $OVERLORDADJ$ 점령하 일본"
  JAP_SOV_communism_autonomy_puppet_ADJ:0 "$OVERLORDADJ$ 점령하 일본"
+
+ JAP_KOR:0 "조선총독부"

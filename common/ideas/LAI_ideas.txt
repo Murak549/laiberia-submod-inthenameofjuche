@@ -1,0 +1,3201 @@
+ideas = {
+  
+   economy = {
+		law = yes
+		LAI_collectivized_society = {
+		
+		    name = SPR_collectivized_society
+
+			picture = SPR_collectivized_society		
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		
+			modifier = {
+				resistance_target = -0.2
+				consumer_goods_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.3
+				conversion_cost_civ_to_mil_factor= -0.3
+				conversion_cost_mil_to_civ_factor = -0.3
+				global_building_slots_factor = 0.1
+				industrial_capacity_factory = 0.7
+				industrial_capacity_dockyard = 0.7
+				research_speed_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.2
+				production_factory_max_efficiency_factor = -0.2
+				line_change_production_efficiency_factor = 0.1
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+  
+   country = {
+	 lai_storng_republic = {
+			picture = lai_storng_republic
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.25
+				production_speed_buildings_factor = 0.1
+				max_surrender_limit_offset = 0.05
+				send_volunteer_size = 2
+			}
+		}
+		
+	  lai_remember_por = {
+			picture = lai_remember_pors
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    political_power_gain = -0.4
+				production_speed_buildings_factor = -0.4
+			}
+		}
+		
+		lai_anti_british_idea = {
+			picture = lai_anti_britishs
+
+			allowed = {
+				original_tag = LAI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			targeted_modifier = {
+                tag = ENG
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+		}
+		
+		lai_army_notgood = {
+			picture = lai_not_good_army
+
+			allowed = {
+				original_tag = LAI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				max_command_power = -20
+				mobilization_speed = -0.2
+				army_org_factor = -0.1
+				planning_speed = -0.2
+				army_defence_factor = -0.15
+				army_attack_factor = -0.15
+				naval_coordination = -0.2
+	            navy_submarine_attack_factor = -0.2
+	            navy_capital_ship_attack_factor = -0.1
+				navy_screen_attack_factor = -0.1
+			}
+		}
+		
+		bangchi_yongu_hakhwae = {
+
+			name = bangchi_yongu_hakhwae
+
+			picture = lai_notgood_research
+
+			allowed = {
+				original_tag = LAI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = -0.3
+			}
+		}
+		
+		jagum_bujok_yongu_hakhwae = {
+
+			name = jagum_bujok_yongu_hakhwae
+
+			picture = jap_duplicate_research
+
+			allowed = {
+				original_tag = LAI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = -0.1
+			}
+		}
+		
+		cnt_problems = {
+
+			name = cnt_problems
+
+			picture = junguk_nodong_yongmang_problem
+
+			allowed = {
+				original_tag = LAI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.05
+				consumer_goods_factor = 0.08
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+		
+		lai_bad_at_mili_cons = {
+
+			name = lai_bad_at_mili_cons
+
+			picture = not_good_mili_cons
+
+			allowed = {
+				original_tag = LAI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_arms_factory_factor = -0.1
+			}
+		}
+		
+		lai_misuk_at_airforce = {
+
+			name = lai_misuk_at_airforce
+
+			picture = misuk_at_airforces
+
+			allowed = {
+				original_tag = LAI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				license_air_purchase_cost = 0.2
+				air_accidents_factor = 0.5
+				air_night_penalty = 0.2
+            	air_weather_penalty = 0.2
+			}
+		}
+		
+		iberian_counciner_1 = {
+
+			name = iberian_counciner_1
+
+			picture = LAI_manuel_azana
+
+			allowed = {
+				original_tag = LAI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			}
+		}
+		
+		lai_mili_cons = {
+			picture = idea_lai_mili_cons
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_arms_factory_factor = 0.1
+			}
+		}
+		
+		lai_civil_cons = {
+			picture = idea_lai_civil_cons
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		
+		lai_army_jaejungbi = {
+			picture = idea_lai_army_jaejungbi
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    max_command_power = 20
+			}
+		}
+		
+		lai_dream_of_mujuk_hamdae = {
+			picture = idea_lai_dream_of_mujuk_hamdae
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+			
+			    ship_hull_heavy = {
+					build_cost_ic = -0.10 instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+	  }
+	  
+	  lai_bosupa_banbal = {
+			picture = idea_lai_gaehyuk_banbal
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    infantry_equipment = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+			    artillery_equipment = {
+					instant = yes
+					build_cost_ic = 0.08
+				}
+			}
+	  }
+	  
+	  lai_yukgun_artillery_bonus = {
+			picture = idea_lai_yukgun_artillery_bonus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.08
+				}
+			}
+	  }
+	  
+	  lai_gaehyuk_banbal = {
+			picture = idea_lai_gaehyuk_banbal
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    light_tank_chassis = {
+					instant = yes
+					build_cost_ic = 0.15
+					reliability = -0.1
+				}
+				medium_tank_chassis = {
+					instant = yes
+					build_cost_ic = 0.2
+					reliability = -0.1
+				}
+				heavy_tank_chassis = {
+					instant = yes
+					build_cost_ic = 0.25
+					reliability = -0.1
+				}
+			}
+	  }
+	  
+	  lai_yukgun_tank_bonus = {
+			picture = idea_lai_yukgun_tank_bonus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    light_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				medium_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.075
+					reliability = 0.05
+				}
+				heavy_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.05
+					reliability = 0.1
+				}
+			}
+	  }
+	  lai_bb_bonus = {
+			picture = idea_lai_bb_bonus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    capital_ship = {
+					instant = yes
+					build_cost_ic = -0.05
+					armor_value = 0.1
+				}
+			}
+	  }
+	  lai_dd_bonus = {
+			picture = idea_lai_dd_bonus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    screen_ship = {
+					instant = yes
+					build_cost_ic = -0.1
+					naval_speed = 0.05
+				}
+			}
+	  }
+	  lai_ss_bonus = {
+			picture = idea_lai_ss_bonus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    submarine = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+	  }
+	  
+	  lai_spains_shikminji_gaebal = {
+			picture = lai_spains_shikminji_gaebal
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    local_resources_factor = 0.05
+			}
+			
+	  }
+	  
+	  lai_portugals_shikminji_gaebal = {
+			picture = lai_portugals_shikminji_gaebal
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    compliance_gain = 0.05
+				consumer_goods_factor = 0.05
+			}
+			
+	  }
+	  
+	  lai_fascism_gil = {
+			picture = lai_fascism_gil
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    fascism_drift = 0.08
+			}
+			
+	  }
+	  
+	  lai_inminae_gil = {
+			picture = lai_communism_gil
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    communism_drift = 0.08
+			}
+			
+	  }
+	  
+	  lai_kingdom_gil = {
+			picture = lai_kingdom_gil
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    neutrality_drift = 0.05
+			}
+			
+	  }
+	  
+	  lai_anacia_gil = {
+			picture = lai_anacia_gil
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    neutrality_drift = 0.05
+			}
+			
+	  }
+	  
+	  lai_democratic_gil = {
+			picture = lai_democratic_gil
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    democratic_drift = 0.05
+			}
+			
+	  }
+		
+	  LAI_honransurupda = {
+			picture = lai_wtf
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    stability_factor = -0.15
+				war_support_factor = -0.15
+				disabled_ideas = 1
+			}
+		}
+		
+		LAI_catalonia_tanap = {
+			picture = lai_nocatalonia
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    stability_weekly = -0.0001
+				war_support_weekly = 0.001
+			}
+		}
+		
+	    LAI_no_jachiju_gwanhwan = {
+			picture = FRA_matignon_agreements
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    stability_factor = -0.2
+				war_support_factor = -0.3
+			}
+		}
+		
+		honran_jamjaewae = {
+			picture = SPA_national_recovery
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    stability_weekly = 0.001
+			}
+		}
+		
+		girl_chamjunggwen = {
+			picture = lai_woman
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    add_ideas = 0.05
+			    political_power_gain = 0.2
+			}
+		}
+		
+		LAI_gungukjues = {
+			picture = generic_manpower_bonus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    conscription_factor = 0.15
+				justify_war_goal_time = -0.2
+				ai_desired_divisions_factor = 0.2
+			}
+		}
+		
+		LAI_gungukjues2 = {
+			picture = generic_manpower_bonus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    conscription_factor = 0.2
+			}
+		}
+		
+		LAI_shigol_ingujosa = {
+			picture = generic_manpower_bonus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    conscription_factor = 0.1
+			}
+		}
+		
+		LAI_war_ready = {
+			picture = chi_war_of_resistance3
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.05
+			    war_support = 0.05
+			}
+		}
+		
+		LAI_junhu_bokgu = {
+			picture = generic_pp_unity_bonus
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    stability_weekly = 0.001
+				political_power_gain = 0.05
+				max_surrender_limit_offset = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		LAI_second_sanup_plan = {
+			picture = generic_constitutional_guarantees
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_industrial_complex_factor = 0.05
+			}
+		}
+		
+		lai_guadiana_doru_plan = {
+			picture = generic_morale_bonus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_infrastructure_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+	  }
+	  
+	  lai_more_better_ships = {
+			picture = lai_bb_bonus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    capital_ship = {
+					instant = yes
+					build_cost_ic = -0.05
+					armor_value = 0.05
+				}
+				screen_ship = {
+					instant = yes
+					build_cost_ic = -0.05
+					naval_speed = 0.1
+				}
+			}
+	  }
+	  
+	  ships_sell_moneys = {
+			picture = lai_ships_sell
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    consumer_goods_factor = -0.05
+			}
+	  }
+	  
+	  good_research = {
+			picture = generic_research_bonus
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    research_speed_factor = 0.05
+			}
+		}
+		
+	  LAI_laiberian_angrys = {
+			picture = generic_purge
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    political_power_gain = -0.05
+				conscription_factor = -0.1
+			    consumer_goods_factor = 0.1
+				max_surrender_limit_offset = -0.15
+			    research_speed_factor = -0.05
+			}
+		}
+		
+	LAI_naval_plus = {
+			picture = generic_coastal_navy
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_dockyard_factor = 0.2
+			}
+		}
+		
+		LAI_yukgun_support = {
+			picture = generic_aircraft_support
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    air_accidents_factor = 0.1
+				air_detection = 0.1
+			}
+		}
+		
+		LAI_jaegonggwan = {
+			picture = air_war_plans_division_focus
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    air_accidents_factor = -0.2
+			}
+		}
+		
+		artillery_gongsae_gogo = {
+			picture = generic_artillery_manufacturer_1
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    army_attack_factor = 0.05
+			}
+		}
+		
+		lai_giuck_of_guadiana = {
+			picture = generic_constitutional_guarantees
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_infrastructure_factor = 0.15
+				production_speed_buildings_factor = 0.15
+			    production_factory_efficiency_gain_factor = 0.2
+				stability_factor = 0.1
+			}
+		}
+		
+		lai_central_gongjang = {
+			picture = generic_constitutional_guarantees
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    industrial_capacity_factory = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		
+		lai_jachijungbu_controls_cons = {
+			picture = generic_build_infrastructure
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_buildings_factor = 0.05
+			}
+		}
+		
+		lai_shikminji_gaebal_start = {
+			picture = soviet_german_friendship
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    non_core_manpower = 0.05
+				resistance_growth = 0.02
+				compliance_gain = -0.02
+			}
+		}
+		
+		gold_hwakbo_yeaha = {
+			picture = SPR_seize_the_gold_reserves
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    consumer_goods_factor = -0.05
+			}
+		}
+		
+	    anarchist_sahwae = {
+			picture = lai_woman
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    stability_weekly = -0.01
+			    army_core_attack_factor = 0.2
+			    army_core_defence_factor = 0.2
+				army_org_factor = 0.1
+				conscription_factor = 0.05
+				max_surrender_limit_offset = 0.5
+				fascism_acceptance = -100
+				communism_acceptance = -100
+				democratic_acceptance = -100
+				neutrality_acceptance = -100
+			}
+		}
+		
+		iberian_civil_war = {
+			picture = SPA_recovering_from_the_civil_war
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+		ai_get_ally_desire_factor = -1000
+		ai_call_ally_desire_factor = -1000
+		ai_join_ally_desire_factor = -1000
+		join_faction_tension = 10
+			}
+		}
+		
+		anarchy_attack_plan = {
+			picture = MEX_revolutionary_army
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+		    army_attack_factor = 0.05
+			}
+		}
+		
+		anarchy_defense_plan = {
+			picture = MEX_revolutionary_army
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+		    army_defence_factor = 0.05
+			}
+		}
+		
+		support_of_junguk_nodong_yunamng = {
+			picture = support_of_junguk_nodong_yunmangs
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+		    production_speed_infrastructure_factor = 0.1
+			industrial_capacity_factory = 0.05
+			industrial_capacity_dockyard = 0.05
+			}
+		}
+		
+		bunyuldwaen_armys = {
+			picture = MEX_revolutionary_army
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+		    army_core_attack_factor = -0.1
+			army_core_defence_factor = -0.05
+			}
+		}
+		
+		daegongsae_of_civil_War = {
+			picture = SWI_spirit_of_helvetia_aggressive_war
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+		    army_core_attack_factor = 0.4
+			army_core_defence_factor = -0.1
+			army_org_factor = -0.05
+			}
+		}
+		
+		daegsungjun_of_civil_War = {
+			picture = POR_volunteers_in_the_war2
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+		    army_core_attack_factor = -0.1
+			army_core_defence_factor = 0.4
+			army_org_factor = 0.2
+			}
+		}
+		
+		LAI_junhu_bokgu_2 = {
+			picture = generic_pp_unity_bonus
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.05
+				max_surrender_limit_offset = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		anarchist_dont_no_gukgyung = {
+			picture = SPR_torchbearers_of_tomorrow
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_when_in_major_war_time = -0.25
+				justify_war_goal_time = -0.2
+				command_power_gain = 0.1
+			}
+		}
+		
+		anarchist_jukdanghi = {
+			picture = SPR_torchbearers_of_tomorrow
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = 0.05
+				command_power_gain = 0.1
+				army_attack_factor = -0.05
+			}
+		}
+		
+		LAI_nojoga_hwaesa_iggunda = {
+			picture = generic_constitutional_guarantees
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				line_change_production_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.02
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		
+		LAI_focus_at_sanuphwa = {
+			picture = generic_industrial_concern_1
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		
+		
+		## 왕정 ##
+		
+		LAI_wangjung_batara = {
+			picture = generic_monarchist_uprising
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.002
+			}
+		}
+		
+		LAI_carlists_helps = {
+
+			picture = SPA_carlism
+
+			allowed = {
+				original_tag = LAI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			    political_power_gain = 0.01
+				training_time_factor = -0.15
+				conscription = 0.03
+			}
+		}
+		
+		habsburgs_new_home = {
+
+			picture = SPA_carlism
+
+			allowed = {
+				original_tag = LAI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			    political_power_gain = 0.1
+				max_surrender_limit_offset = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		LAI_new_home_new_dreams = {
+
+			picture = HUN_hungarian_monarchy_habsburg
+
+			allowed = {
+				original_tag = LAI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			    justify_war_goal_time = -0.2
+				war_support_factor = 0.15
+				mobilization_speed = 0.1
+			}
+		}
+		
+		
+		LAI_something_is_wrong = {
+
+			picture = # 의도한것
+
+			allowed = {
+				original_tag = LAI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			    political_power_gain = -0.1
+				conscription_factor = -0.02
+			}
+		}
+		
+		
+		
+		LAI_daegyumo_paup = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = LAI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			    political_power_gain = -0.05
+				production_speed_buildings_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				consumer_goods_factor = 0.1
+			}
+		}
+		
+		LAI_xa_javier_I = {
+
+			picture = LAI_xa_javier_I
+
+			allowed = {
+				original_tag = LAI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			    political_power_gain = 0.05
+				stability_weekly = 0.001
+				stability_factor = 0.1
+			}
+		}
+		
+		LAI_gukwang_says = {
+
+			picture = SPA_crusade_against_democracy
+
+			allowed = {
+				original_tag = LAI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			    army_defence_factor = 0.1
+				army_attack_factor = 0.1
+				army_org_factor = 0.1
+				army_speed_factor = 0.1
+				training_time_factor = -0.1
+				army_morale_factor = 0.1
+				political_power_factor = 0.05
+				conscription_factor = 0.15
+				no_supply_grace = 48
+			}
+		}
+		
+		
+		LAI_nodongja_haebangwar = {
+
+			picture = SPR_torchbearers_of_tomorrow
+
+			allowed = {
+				original_tag = LAI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				justify_war_goal_time = -0.3
+			}
+		}
+		
+		
+		WARGOAL_EZ = {
+			picture = chi_army_corruption2
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			justify_war_goal_time = -0.5
+			}
+		}
+		
+		LAI_cons_buhung_plan = {
+			picture = generic_constitutional_guarantees
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			production_speed_buildings_factor = 0.15
+			}
+		}
+		
+		LAI_army_buhung_plan = {
+			picture = generic_army_war_college
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			experience_gain_army_factor = 0.1
+			experience_gain_air_factor = 0.1
+			experience_gain_navy_factor = 0.1
+			}
+		}
+		
+		lai_guadiana_doru_plan_2 = {
+			picture = generic_morale_bonus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_industrial_complex_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+	     }
+		 
+		 LAI_iberian_pungyo = {
+			picture = generic_goods_red_bonus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    stability_weekly = 0.002
+				consumer_goods_factor = 0.2
+			}
+	     }
+		 
+		 LAI_wernowreacharmy = {
+			picture = chi_army_corruption3
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+				army_morale_factor = 0.05
+			}
+	     }
+		 
+		 support_makes_more_dockyards = {
+			picture = generic_coastal_defense_ships2
+			allowed = {
+			      always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			production_speed_dockyard_factor = 0.1
+            industrial_capacity_dockyard = 0.1
+			}
+		}
+		
+		LAI_artillery_offensive = {
+			picture = generic_artillery_manufacturer_2
+			allowed = {
+			      always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+		    army_attack_factor = 0.1
+			}
+			
+			equipment_bonus = {
+			    artillery_equipment = {
+					instant = yes
+					build_cost_ic = 0.2
+				}
+			}
+			
+			research_bonus = {
+				artillery = 0.1
+			}
+		}
+		
+		LAI_artillery_offensive2 = {
+			picture = generic_artillery_manufacturer_2
+			allowed = {
+			      always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+		    army_attack_factor = -0.1
+			}
+			
+			equipment_bonus = {
+			    artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+			}
+			
+			research_bonus = {
+				artillery = 0.1
+			}
+		}
+		
+		tank_our_making = {
+			picture = man_five_year_plan_tank
+			allowed = {
+			      always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    light_tank_chassis = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				medium_tank_chassis = {
+					instant = yes
+					build_cost_ic = 0.15
+					reliability = 0.1
+				}
+				heavy_tank_chassis = {
+					instant = yes
+					build_cost_ic = 0.2
+					reliability = 0.15
+				}
+			}
+		}
+		
+		LAI_anti_human_tank = {
+			picture = generic_tank_manufacturer_1
+			allowed = {
+			      always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    light_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				medium_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+					reliability = 0.1
+				}
+				heavy_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.15
+					reliability = 0.15
+				}
+			}
+		}
+		 
+		 LAI_army_generals_yuksung = {
+			picture = chi_army_corruption
+			allowed = {
+			      always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			army_leader_start_attack_level = 1
+			army_leader_start_defense_level	= 1
+			}
+		}
+		
+		LAI_naval_generals_yuksung = {
+			picture = generic_the_london_naval_treaty
+			allowed = {
+			      always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			navy_leader_start_attack_level = 1
+			navy_leader_start_defense_level	= 1
+			}
+		}
+		
+		LAI_expreience_ggujun = {
+			picture = MEX_politicised_army_2
+			allowed = {
+			      always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			experience_gain_army_factor = 0.1
+			}
+		}
+		
+		LAI_idea_airplane_chip_haha = {
+			picture = generic_air_bonus
+			allowed = {
+			      always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+			small_plane_airframe = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+			medium_plane_airframe = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+			}
+		}
+		
+		LAI_idea_flying_pobyungdae = {
+			picture = eng_special_air_service
+			allowed = {
+			      always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    medium_plane_airframe = {
+					air_ground_attack = 0.15
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				small_plane_cas_airframe = {
+					air_ground_attack = 0.15
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		
+		LAI_idea_british_attacks = {
+			picture = lai_anti_britishs
+			allowed = {
+			      always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			consumer_goods_factor = -0.2
+			army_org_factor = 0.2
+			conscription_factor = 0.2
+			war_support_weekly = 0.005
+			}
+			
+			targeted_modifier = {
+                tag = ENG
+				attack_bonus_against = 0.3
+				defense_bonus_against = 0.3
+			}
+		}
+		
+		LAI_attack_jungles = {
+			picture = chi_war_of_resistance
+			allowed = {
+			      always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			army_org_factor = 0.5
+			}
+			
+			targeted_modifier = {
+                tag = PRU
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+                tag = ARG
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+                tag = BRA
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		
+		LAI_idea_mutjin_empire = {
+			picture = chi_war_of_resistance
+			allowed = {
+			      always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			army_core_attack_factor = 0.5
+			army_core_defence_factor = 0.5
+			army_speed_factor = 0.2
+			army_org_factor = 0.2
+			war_support_weekly = 0.005
+			political_power_gain = 0.1
+			research_speed_factor = 0.1
+			army_morale_factor = 0.2
+			justify_war_goal_time = -0.2
+			}
+		}
+		
+		LAI_idea_anti_no = {
+			picture = chi_war_of_resistance
+			allowed = {
+			      always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = 0.2
+			political_power_gain = 0.15
+			army_org_factor = 0.05
+			}
+		}
+		
+		LAI_idea_franco_sayss = {
+			picture = chi_war_of_resistance
+			allowed = {
+			      always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = -0.1
+			political_power_gain = 0.3
+			army_org_factor = -0.1
+			}
+		}
+		
+		LAI_idea_daegiup_save = {
+			picture = chi_war_of_resistance
+			allowed = {
+			      always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			consumer_goods_factor = -0.1
+			industrial_capacity_dockyard = 0.05
+			industrial_capacity_factory = 0.05
+			production_speed_industrial_complex_factor = 0.1
+			production_speed_arms_factory_factor = 0.1
+			}
+		}
+		
+		LAI_idea_army_yunhyangryuk_suyong = {
+			picture = FRA_matignon_agreements
+			allowed = {
+			      always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = -0.2
+			army_attack_factor = 0.1
+			army_defence_factor = 0.1
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.1
+			}
+		}
+		
+		FRA_attack_iberia = {
+			picture = FRA_national_mobilization_focus
+			allowed = {
+			     original_tag = FRA
+			}
+			allowed_civil_war = {
+			    always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+			army_org_factor = 0.5
+			army_speed_factor = 1
+			army_morale_factor = 0.5
+			}
+			
+			targeted_modifier = {
+                tag = LAI
+				attack_bonus_against = 2
+				defense_bonus_against = 2
+			}
+		}
+		
+		LAI_gupjak_chingong = {
+			picture = FRA_national_mobilization_focus
+			allowed = {
+			     original_tag = FRA
+			}
+			allowed_civil_war = {
+			    always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+			army_org_factor = -0.5
+			army_speed_factor = 0.1
+			}
+			
+			targeted_modifier = {
+                tag = FRA
+				attack_bonus_against = -0.2
+				defense_bonus_against = -0.2
+			}
+		}
+		
+		LAI_its_tim_to_offensive = {
+			picture = FRA_national_mobilization_focus
+			allowed = {
+			     original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+			army_org_factor = 0.35
+			army_speed_factor = 0.2
+			}
+			
+			targeted_modifier = {
+                tag = FRA
+				attack_bonus_against = 0.6
+				defense_bonus_against = 0.6
+			}
+		}
+		
+		FRA_ARMY_SAGI_DEAD = {
+			picture = FRA_national_mobilization_focus
+			allowed = {
+			     original_tag = FRA
+			}
+			allowed_civil_war = {
+			    always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+			army_org_factor = -0.1
+			army_speed_factor = 0.2
+			consumer_goods_factor = 0.1
+			industrial_capacity_factory = 0.5
+			stability_factor = -0.1
+			}
+			
+			targeted_modifier = {
+                tag = LAI
+				attack_bonus_against = -0.2
+				defense_bonus_against = -0.2
+			}
+		}
+		
+		ITA_HELPIBERIA = {
+			picture = FRA_national_mobilization_focus
+			allowed = {
+			     original_tag = ITA
+			}
+			allowed_civil_war = {
+			    always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+			army_org_factor = 0.5
+			army_speed_factor = 0.25
+			}
+			
+			targeted_modifier = {
+                tag = FRA
+				attack_bonus_against = 0.5
+				defense_bonus_against = 0.5
+			}
+		}
+		
+		LAI_its_time_for_boksu = {
+			picture = FRA_political_violence
+			allowed = {
+			     original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+			army_org_factor = 0.15
+			army_speed_factor = 0.2
+			}
+			
+			targeted_modifier = {
+                tag = FRA
+				attack_bonus_against = 1
+				defense_bonus_against = 1
+			}
+		}
+		
+		SOV_DAE_JOGUK_WAR = {
+			picture = FRA_national_mobilization_focus
+			allowed = {
+			     original_tag = SOV
+			}
+			allowed_civil_war = {
+			    always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+			army_org_factor = 0.2
+			army_speed_factor = 0.2
+			}
+			
+			targeted_modifier = {
+                tag = GER
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		
+		lai_anti_war_gamgyung = {
+			picture = CHI_war_of_resistance3
+			allowed = {
+			     original_tag = SOV
+			}
+			allowed_civil_war = {
+			    always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+			army_org_factor = -0.5
+			army_attack_factor = -0.5
+			army_defence_factor = -0.5
+			army_morale_factor = -0.5
+			}
+		}
+		
+		laifra_snagho_army_hyupryuk = {
+			picture = generic_women_in_the_army
+			allowed = {
+			     OR = {
+			     original_tag = LAI
+				 original_tag = FRA
+				 }
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			army_org_factor = 0.1
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+			army_morale_factor = 0.05
+			}
+		}
+		
+		occspm_banran_of_frenchs = {
+			picture = generic_women_in_the_army
+			allowed = {
+			     OR = {
+			     original_tag = LAI
+				 original_tag = FRA
+				 }
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			army_org_factor = -0.5
+			political_power_gain = -0.5
+			stability_weekly = -0.005
+			war_support_weekly = -0.005
+			}
+		}
+		
+		lai_ideas_iberian_hangjungbu = {
+
+			picture = LAI_british_gangjum
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            modifier = {
+				stability_factor = -0.25
+				political_power_gain = -0.3
+			}
+
+			targeted_modifier = {
+				tag = LAI
+				cic_to_target_factor = 0.5
+				mic_to_target_factor = 0.5
+			}
+		}
+		
+		
+		
+		## 브리튼 ##
+		
+		IBERIAN_GANGJUM = {
+
+			picture = LAI_british_gangjum
+
+			allowed = {
+				original_tag = ENG
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.25
+				political_power_gain = -0.05
+			}
+			targeted_modifier = {
+				tag = LAI
+				cic_to_target_factor = 0.75
+				mic_to_target_factor = 0.75	
+			}
+		}
+		
+		FRANKREICH_GANGJUM = {
+
+			picture = LAI_franks_gangjum
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            modifier = {
+				stability_factor = -0.25
+				political_power_gain = -0.05
+			}
+
+			targeted_modifier = {
+				tag = LAI
+				cic_to_target_factor = 0.45
+				mic_to_target_factor = 0.45	
+			}
+		}
+		 
+		 
+		 ## 이탈리아 ##
+		 
+		 ITA_WAR_WITH_GREECE = {
+			picture = FRA_national_mobilization_focus
+			allowed = {
+			     original_tag = GER
+				 original_tag = ITA
+				 original_tag = BUL
+				 original_tag = HUN
+				 original_tag = SLO 
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			targeted_modifier = {
+                tag = GRE
+				attack_bonus_against = 0.5
+				defense_bonus_against = 0.5
+			}
+		}
+		
+		 TUR_WAR_WITH_KURDISTAN = {
+			picture = FRA_national_mobilization_focus
+			allowed = {
+			     original_tag = TUR
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			army_org_factor = 0.5
+			army_core_attack_factor = 0.2
+			army_core_defence_factor = 0.2
+			army_speed_factor = 0.2
+			}
+			
+			targeted_modifier = {
+                tag = KUR
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+		}
+		 
+		
+		
+		## 소형국가 ##
+		
+		GENERIC_little_countries = {
+			picture = FRA_national_mobilization_focus
+			allowed = {
+				 original_tag = MNC
+				 original_tag = AND
+				 original_tag = LIE
+				 original_tag = SAN
+				 original_tag = PAP
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			army_attack_factor = -0.5
+			army_defence_factor = -0.5
+			research_speed_factor = 0.2
+			consumer_goods_factor = -0.2
+			ai_get_ally_desire_factor = -1000
+		    ai_call_ally_desire_factor = -1000
+		    ai_join_ally_desire_factor = -1000
+		    join_faction_tension = 10
+			trade_opinion_factor = 0.2
+			enemy_justify_war_goal_time = 1.5
+			}
+		}
+		
+		
+		
+		## 프랑스 주둔군 ##
+		
+		jungrip_army = {
+			picture = general_staff
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			army_core_attack_factor = 0.1
+			army_core_defence_factor = 0.1
+			ai_get_ally_desire_factor = -1000
+		    ai_call_ally_desire_factor = -1000
+		    ai_join_ally_desire_factor = -1000
+		    join_faction_tension = 10
+			}
+		}
+		
+		FREE_algeria = {
+			picture = chi_army_corruption2
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			ai_get_ally_desire_factor = -1000
+		    ai_call_ally_desire_factor = -1000
+		    ai_join_ally_desire_factor = -1000
+		    join_faction_tension = 10
+			army_core_attack_factor = 0.5
+			army_core_defence_factor = 0.5
+			max_surrender_limit_offset = 0.8
+			}
+		}
+		
+		
+		## 자유시 ##
+		# 자유시 내전중에 77ㅓ억하고 싶냐? 그러면 9보 15개랑 핵심영토 공방 80%단 미친놈들 이기던지 ㅋㅋ #
+		# 대신 세력은 못가게 해줌 ㅋㅋ #
+		
+		land_of_the_free_iberia = {
+			picture = neutrality_idea
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+		    army_core_attack_factor = 0.8
+			army_core_defence_factor = 0.8
+			max_surrender_limit_offset = 1
+			ai_get_ally_desire_factor = -1000
+		    ai_call_ally_desire_factor = -1000
+		    ai_join_ally_desire_factor = -1000
+		    join_faction_tension = 10
+			}
+		}
+		
+		## 자치주 
+		
+		land_of_free_jachiju = {
+			picture = generic_war_preparation
+			allowed = {
+				 original_tag = LAI
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+		    army_core_attack_factor = 0.5
+			army_core_defence_factor = 0.5
+			max_surrender_limit_offset = 0.5
+			}
+		}
+		
+		
+		
+		
+		## Taguk ##
+		
+		FRA_IDEA_hidden_president_laval = {
+			picture = FRA_ideas_hidden_president_laval
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    political_power_gain = 0.1
+				stability_factor = -0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		GER_thankyou = {
+			picture = SPR_seize_the_gold_reserves
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_arms_factory_factor = 0.05
+				production_speed_dockyard_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_infrastructure_factor = 0.05
+				production_speed_rail_way_factor = 0.05
+				fascism_acceptance = -100
+			}
+		}
+		
+		egy_loving_my_country = {
+			picture = FRA_la_deluge
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    war_support_factor = 0.05
+			    army_attack_factor = 0.05
+			}
+		}
+		
+		HUN_kingdom_of_maria = { # 헝가리, 마리아의 '왕국'
+			picture = Hungary_Marian_Kingdom
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			allowed_civil_war = {
+				NOT ={
+					has_government = communism
+					has_government = democratic
+				}
+			}
+			available = {
+			  OR = {
+			   has_government = neutrality
+			   has_government = fascism
+			   }
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    political_power_gain = 0.05
+			    max_surrender_limit_offset = 0.2 # 공수 띡띡하면 뒤지는거 방지
+			}
+		}
+		
+		
+		USA_wonjo = {
+			picture = generic_usa_conflict
+			allowed = {
+				 original_tag = FER
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				research_speed_factor = 0.05
+				license_air_purchase_cost = -0.2
+			}
+		}
+	
+	Siberian_army = {
+
+			name = Siberian_army
+
+			picture = chi_army_corruption2
+
+			allowed = {
+				original_tag = FER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				mobilization_speed = -0.25
+				command_power_gain_mult = -0.05
+				minimum_training_level = 0.1
+				planning_speed = -0.2
+				max_planning = -0.1
+				army_defence_factor = -0.2
+				army_attack_factor = -0.2
+				air_accidents_factor = 0.5
+			}
+		}
+		
+	## RUS 
+		
+		RUS_TONGIL_1 = {
+
+			picture = RUS_Republic
+
+			allowed = {
+				always = no # Added via event
+			}
+
+			modifier = {
+				weekly_manpower = 500
+				stability_factor = 0.1
+			}
+		}
+		
+		RUS_TONGIL_2 = {
+
+			picture = RUS_Republic
+
+			allowed = {
+				always = no # Added via event
+			}
+
+			modifier = {
+				weekly_manpower = 500
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				democratic_drift = 0.05
+			}
+			
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+	
+	RUS_gwangwang = {
+
+			name = RUS_gwangwang
+
+			picture = tur_balkan_central_bank_wealthy_greece
+			
+			allowed = {
+				original_tag = FER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+	RUS_civil_cons = {
+
+			name = RUS_civil_cons
+
+			picture = SOV_third_five_year_plan_military
+
+			allowed = {
+				original_tag = FER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		
+	RUS_arms_cons = {
+
+			name = RUS_arms_cons
+
+			picture = SOV_third_five_year_plan_military
+
+			allowed = {
+				original_tag = FER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		
+	USA_Helped_Giban_Cons = {
+
+			name = USA_Helped_Giban_Cons
+
+			picture = generic_build_infrastructure
+
+			allowed = {
+				original_tag = FER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		
+	Siberian_army_jaejungbi = {
+
+			name = Siberian_army_jaejungbi
+
+			picture = generic_war_preparation
+
+			allowed = {
+				original_tag = FER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = { 
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+				mobilization_speed = 0.05
+				army_org_factor = -0.05
+			}
+		}
+	  
+	  Gun_juryuk = {
+			picture = lai_yukgun_artillery_bonus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+	  }
+	  
+	  RUS_reserach_speed = {
+			picture = generic_research_bonus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    research_speed_factor = 0.05
+			}
+	  }
+	  
+	  Siberian_manpower_addes = {
+			picture = generic_manpower_bonus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			    conscription_factor = 0.1
+			}
+	  }
+	  
+	  hamsun_cons_usa = {
+			picture = generic_coastal_defense_ships
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    capital_ship = {
+					instant = yes
+					build_cost_ic = -0.05
+					armor_value = 0.05
+				}
+				screen_ship = {
+					instant = yes
+					build_cost_ic = -0.05
+					naval_speed = 0.1
+				}
+			}
+	  }
+	  
+	  Gonggun_jjikuenae = {
+			picture = generic_air_research
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+			   air_equipment = {
+				instant = yes
+				build_cost_ic = -0.1
+				}
+			}
+	  }
+	  
+	  
+	  ## FFR ##
+	  
+	  FFR_vaterland_of_francais = {
+			picture = FRA_undividable
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			   political_power_gain = 0.1
+			   war_support_factor = 0.05
+			}
+	  }
+	  
+	  remember_of_vichi_france = {
+			picture = FRA_national_resistance_council
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			   fascism_drift = 0.05
+			   democratic_drift = -0.02
+			   communism_drift = -0.02
+			}
+	  }
+	  
+	  war_baesang = {
+			picture = generic_goods_red_bonus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			   consumer_goods_factor = 0.2
+			}
+	  }
+	  
+	  war_gujae = {
+			picture = generic_army_war_college
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			   army_defence_factor = -0.1
+			   army_attack_factor = -0.1
+			   army_org_factor = -0.2
+			   max_planning = -0.05
+			   supply_factor = -0.15
+			   air_accidents = 0.2
+ 	           air_detection = -0.2
+	           local_org_regain = -0.2
+	           naval_detection = -0.3
+	           naval_hit_chance = -0.2
+	           naval_speed_factor = -0.25
+	           org_loss_when_moving = 0.25
+	           positioning = -0.2
+			}
+	  }
+	  
+	  war_cons_gujae = {
+			picture = ETH_conservative_high_command
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			   production_speed_arms_factory_factor = -0.2
+			   production_speed_dockyard_factor = -0.2
+			   industrial_capacity_factory = -0.2
+			   industrial_capacity_dockyard = -0.2
+			}
+	  }
+	  
+	  no_ones_go_to_the_army = {
+			picture = eng_imperial_conscription
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			   army_defence_factor = -0.1
+			   army_attack_factor = -0.1
+			   conscription_factor = -0.15
+			   max_surrender_limit_offset = -0.2
+			   war_support_factor = -0.5
+			}
+	  }
+	  
+	  secret_baesangum_no = {
+			picture = generic_goods_red_bonus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			   consumer_goods_factor = -0.05
+			}
+	  }
+	  
+	  jaegun_of_frances = {
+			picture = generic_build_infrastructure
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			   production_speed_infrastructure_factor = 0.05
+			   production_speed_rail_way_factor = 0.05
+			}
+	  }
+	  
+	  yukgun_jaegun = {
+			picture = chi_army_corruption2
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			   experience_gain_army = 0.01
+			}
+	  }
+	  
+	  haegn_jaegun = {
+			picture = generic_the_london_naval_treaty
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			   experience_gain_navy = 0.01
+			}
+	  }
+	  
+	  gongun_jaegun = {
+			picture = air_support_focus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			   experience_gain_air = 0.01
+			}
+	  }
+	  
+	  ## FRA
+	    free_france = {
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			   army_defence_factor = 0.05
+			   conscription_factor = 0.05
+			   max_surrender_limit_offset = 0.5
+			}
+			
+			france_reich_talked = {
+			picture = FRA_down_marianne
+			allowed = {
+				 always = no
+			}
+			allowed_civil_war = {
+			    always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+			   stability_factor = 0.05
+			}
+	  }
+	  
+	  }
+	}
+		
+		
+		## Consdesigner ##
+		
+		## 뻐킹 호이스타일 아이콘 만들기 존나 힘드네 ##
+        
+	tank_manufacturer = { 
+		
+		designer = yes
+		
+		renault_iberia = {
+			picture = renault
+
+			
+			allowed = {
+				original_tag = LAI
+			}
+			cost = 150
+
+			available = {
+				NOT = { has_war_with = FRA }
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { fast_tank_manufacturer }
+		}
+		
+		Lince_tank = {
+			picture = LAI_lince
+			
+			allowed = {
+				original_tag = LAI
+			}
+			cost = 100
+			research_bonus = {
+				armor = 0.1
+			}
+			
+			traits = { tank_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+	
+		designer = yes
+		
+		TAP_express = {
+			picture = LAI_TAP_airline
+
+			allowed = {
+				original_tag = LAI
+			}
+			cost = 150
+			available = {
+			 OR = {
+			 has_completed_focus = jaegonggwan_japja
+			 has_completed_focus = jaegonggwuen_letsgo
+			 }
+			}
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			equipment_bonus = {
+			air_equipment = {
+				instant = yes
+				build_cost_ic = -0.05
+				}
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		Iberian_express = {
+			picture = LAI_express
+
+			allowed = {
+				original_tag = LAI
+			}
+			cost = 150
+			available = {
+			 OR = {
+			 has_completed_focus = jaegonggwan_japja
+			 has_completed_focus = jaegonggwuen_letsgo
+			 }
+			}
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+			equipment_bonus = {
+			air_equipment = {
+				instant = yes
+				build_cost_ic = -0.05
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		vinter_canarias = {
+			picture = LAI_Binter_canarias
+			
+			allowed = {
+				original_tag = LAI
+			}
+			
+			available = {
+				or = {
+				has_completed_focus = yukgun_support
+				has_completed_focus = air_support_letsgo
+				}
+			}
+						
+			research_bonus = {
+				air_equipment = 0.2
+			}
+			
+			traits = { CAS_manufacturer naval_aircraft_manufacturer }
+			
+			equipment_bonus = {
+			air_equipment = {
+				instant = yes
+				build_cost_ic = -0.1
+				}
+			}
+			
+			cost = 300
+		}
+		
+		junkers_iberia = {
+			picture = junkers
+			
+			allowed = {
+				original_tag = LAI
+			}
+			cost = 150
+			available = {
+			    or = {
+				has_completed_focus = yukgun_support
+				has_completed_focus = air_support_letsgo
+				}
+				NOT = { has_war_with = GER }
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { CAS_manufacturer }
+			
+			equipment_bonus = {
+			air_equipment = {
+				instant = yes
+				build_cost_ic = -0.15
+				}
+			}
+		}
+	}
+	
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		Irizar_ship = {
+			picture = LAI_irizar
+			
+			allowed = {
+				original_tag = LAI
+			}
+			cost = 150
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+			modifier = {
+			industrial_capacity_dockyard = 0.1
+			}
+		}
+		
+		Navantinee_shipmaker = {
+			picture = LAI_navantinee
+			
+			allowed = {
+				original_tag = LAI
+			}
+			cost = 150
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			industrial_capacity_dockyard = 0.1
+			}
+		}
+		
+		blohm_und_voss_iberia = {
+			picture = blohm_und_voss
+			
+			
+			allowed = {
+				original_tag = LAI
+			}
+			
+			available = {
+				NOT = { has_war_with = GER }
+			}
+			cost = 150
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+			
+			modifier = {
+			industrial_capacity_dockyard = 0.2
+			}
+		}	
+	}
+	
+	materiel_manufacturer = {
+		
+		Irizar_motors = {
+			
+			picture = LAI_irizar
+			
+			allowed = {
+				original_tag = LAI
+			}
+			
+			modifier = { army_attack_factor = 0.05 }
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+		}
+		
+		Iveco = {
+		   
+		    picture = LAI_Iveco
+			
+			allowed = {
+				original_tag = LAI
+			}
+			
+			modifier = { army_attack_factor = 0.05 }
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+	
+	industrial_concern = {
+		
+		Saica_cons = {
+			
+			picture = LAI_saica
+			
+			allowed = {
+				original_tag = LAI
+			}
+			
+			modifier = {
+			production_speed_buildings_factor = 0.15
+			}
+			
+			research_bonus = {
+				industry = 0.1
+				synth_resources = 0.2
+			}
+			
+			cost = 200
+			
+			traits = { industrial_concern }
+		}
+
+		Lince_rail = {
+			
+			picture = LAI_lince
+
+			allowed = {
+				original_tag = LAI
+			}
+			
+			modifier = {
+			production_speed_buildings_factor = 0.05
+			}
+			
+			cost = 100
+			research_bonus = {
+				train_tech = 0.15
+			}
+			
+			traits = { railway_company }
+		}
+	}
+}

@@ -1403,14 +1403,55 @@ on_actions = {
 	
 	
 	
+	#Japanese Korea
+	on_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					OR = {
+						AND = { 
+							TAG = PRK
+							is_subject_of = JAP
+						}
+						AND = { 
+							TAG = KOR
+							is_subject_of = JAP
+						}
+
+					}
+				}
+				set_cosmetic_tag = JAP_KOR
+			}
+		}
+	}
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					OR = {
+						AND = { 
+							TAG = PRK
+							is_subject_of = JAP
+						}
+						AND = { 
+							TAG = KOR
+							is_subject_of = JAP
+						}
+					}
+				}
+				set_cosmetic_tag = JAP_KOR
+			}
+		}
+	}
+
 	#Japanese Manchuria
 	on_puppet = {
 		effect = {
 			if = {
 				limit = { 
 					AND = { 
-						TAG = JAP
-						is_subject_of = MAN
+						TAG = MAN
+						is_subject_of = JAP
 					}
 				}
 				set_cosmetic_tag = JAP_MAN
@@ -1422,8 +1463,8 @@ on_actions = {
 			if = {
 				limit = { 
 					AND = { 
-						TAG = JAP
-						is_subject_of = MAN
+						TAG = MAN
+						is_subject_of = JAP
 					}
 				}
 				set_cosmetic_tag = JAP_MAN
