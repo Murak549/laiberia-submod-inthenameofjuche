@@ -1,51 +1,114 @@
-JAP_gakuhu = {
-	color = rgb { 108 157 139 }
-	color_ui = hsv { 45 91 79 }
+JAP_MAN = { #ORIGIN
+	color = rgb { 255 120 71 }
+	color_ui = rgb { 255 120 71 }
 }
-JAP_yusin = {
-	color = rgb { 217 123 129 }
-	color_ui = hsv { 45 91 79 }
+NOR_SWE = {
+	color = rgb { 36 132 247 }
+	color_ui = rgb { 47 172 255 }
 }
-KOR_VIC3 = {
-	color = rgb { 84 112 117 }
-	color_ui = rgb { 43 68 175 }
+TUR_SYRIAN_PROTECTS = {
+	color = rgb { 169 17 1 }
+	color_ui = rgb { 169 17 1 }
 }
-IDC_FRA = {
-	color = rgb { 57 113 228 }
-	color_ui = rgb { 74 147 255 }
+OCC_LEAGUE_WEIME = {
+	color = rgb { 105 240 240 }
+	color_ui = rgb { 105 240 240 }
 }
-JAP_PRK = {
-	color = rgb { 170 51 51 }
-	color_ui = rgb { 170 51 51 }
+OCC_IBERIAN = {
+	color = rgb { 255 222 94 }
+	color_ui = rgb { 255 222 94 }
 }
-JAP_PRK_colony = {
-	color = rgb { 170 51 51 }
-	color_ui = rgb { 170 51 51 }
+NIC_IBERIAN = {
+	color = rgb { 255 222 94 }
+	color_ui = rgb { 255 222 94 }
 }
-KOR_temp_govern = {
-	color = rgb { 255 224 231 }
-	color_ui = rgb { 255 224 231 }
+IBERIAN_FRAKREICH = {
+	color = rgb { 255 222 94 }
+	color_ui = rgb { 255 222 94 }
 }
+ENG_LAI_PUPPET = {
+	color = rgb { 255 222 94 }
+	color_ui = rgb { 255 222 94 }
+}
+BRA_CHONGDOKBU = {
+	color = rgb { 255 222 94 }
+	color_ui = rgb { 255 222 94 }
+}
+NUEVA_IBERIA = {
+	color = rgb { 255 222 94 }
+	color_ui = rgb { 255 222 94 }
+}
+Riode_Flata = {
+	color = rgb { 255 222 94 }
+	color_ui = rgb { 255 222 94 }
+}
+PRU_CHONGDOKBU = {
+	color = rgb { 255 222 94 }
+	color_ui = rgb { 255 222 94 }
+}
+
+DEAD_SOV = {
+    color = rgb { 125 13 24 }
+	color_ui = rgb { 163 17 31 }
+}
+KAZ_SOVIET_LAI = {
+	color = rgb { 125 13 24 }
+	color_ui = rgb { 163 17 31 }
+}
+FER_RUS_REPUBLIC_LAI = {
+	color = rgb { 0 84 0 }
+	color_ui = rgb { 0 84 0 }
+}
+FER_RUS_2 = {
+	color = rgb { 0 84 0 }
+	color_ui = rgb { 0 84 0 }
+}
+KHA_JUK_SOV = {
+	color = rgb { 81 13 0 }
+	color_ui = rgb { 81 13 0 }
+}
+YAK_ANARCHISM = {
+	color = rgb { 204 0 0 }
+	color_ui = rgb { 35 35 35 }
+}
+ANAC_LAI = {
+	color = rgb { 204 0 0 }
+	color_ui = rgb { 35 35 35 }
+}
+anarchist_bum = {
+	color = rgb { 204 0 0 }
+	color_ui = rgb { 35 35 35 }
+}
+IBE_BISANG = {
+    color = rgb { 40 40 40 }
+	color_ui = rgb { 40 40 40 }
+}
+
+
+FRA_FREE_LAI = { 
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+HOL_FREE = { 
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+BEL_FREE = { 
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+
+FRE_RAJ_LAI = {
+	color = rgb { 170  10  10 }
+	color_ui = rgb { 200  10  10 }
+}
+
+
 MAL_UK = {
     color = rgb { 201 56 93 }
     color_ui = rgb { 255 73 121 }
 }
-DNF_UK = {
-    color = rgb { 201 56 93 }
-    color_ui = rgb { 255 73 121 }
-}
-EGY_UK = {
-    color = rgb { 201 56 93 }
-    color_ui = rgb { 255 73 121 }
-}
-SUD_UK = {
-    color = rgb { 201 56 93 }
-    color_ui = rgb { 255 73 121 }
-}
-PAK_UK = {
-	color = rgb { 170  10  10 }
-	color_ui = rgb { 200  10  10 }
-}
+
 RAJ_UK = {
 	color = rgb { 170  10  10 }
 	color_ui = rgb { 200  10  10 }
@@ -216,7 +279,27 @@ BEL_reichskommissariat = {
 	color_ui = rgb { 122 145 93 }
 }
 
+POL_reichskommissariat = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 122 145 93 }
+}
+
+DEN_reichskommissariat = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 122 145 93 }
+}
+
+ENG_reichskommissariat = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 122 145 93 }
+}
+
 BLR_reichskommissariat = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 122 145 93 }
+}
+
+CRI_reichskommissariat = {
 	color = rgb { 115 115 115 }
 	color_ui = rgb { 122 145 93 }
 }
@@ -226,20 +309,12 @@ SOV_reichskommissariat = {
 	color_ui = rgb { 122 145 93 }
 }
 
-POL_reichskommissariat = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-GEO_reichskommissariat = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-DEN_reichskommissariat = {
+FRA_reichskommissariat = {
 	color = rgb { 115 115 115 }
 	color_ui = rgb { 122 145 93 }
 }
 
-UKR_reichskommissariat = {
+KAU_reichskommissariat = {
 	color = rgb { 115 115 115 }
 	color_ui = rgb { 122 145 93 }
 }
@@ -269,14 +344,6 @@ GER_german_monarchy = {
 	color_ui = rgb { 115 115 115 }
 }
 
-ROC_UNIFIED = { #Maybe good Chinese?
-	color = rgb {12 34 170} #255 244 190
-	color_ui = rgb {12 34 170}
-}
-PRC_proclaimed = { #FUCKING CHINESE
-	color = rgb {215 12 45}
-	color_ui = rgb {215 12 45}
-}
 CHI_warlord_leader = {
 	color = hsv { 0.18 0.6 0.9 } #255 244 190
 	color_ui = hsv { 0.18 0.3 0.9 }
@@ -290,7 +357,7 @@ JAP_showa_restoration = {
 	color_ui = rgb { 230 230 230 }
 }
 
-GER_greater_german_reich = {
+GER_greater_german_reich_LAI = {
 	color = rgb { 54 54 54 }
 	color_ui = rgb { 115 115 115 }
 }
@@ -408,8 +475,8 @@ SPC_poum = {
 }
 
 FRA_VICHY = {
-	color = rgb { 80 168 181 }
-	color_ui = rgb {115 185 196 }
+	color = rgb { 0 18 127 }
+	color_ui = rgb { 0 18 127 }
 }
 
 united_polynesia = {
@@ -847,6 +914,15 @@ SOV_PROVISIONAL = {
     color_ui = rgb { 242 242 242 }
 }
 
+WGR = {
+    color = rgb { 195 236 230 } # The colors are set to be more are less what we are used to
+    color_ui = rgb { 225 255 255 }
+}
+DDR = {
+    color = rgb { 120 150 80 }
+    color_ui = rgb { 150 180 120 }
+}
+
 stalinist_soviet_union = {
 	color = rgb { 125 13 24 }
 	color_ui = rgb { 163 17 31 }
@@ -856,6 +932,7 @@ SOV_left_opposition = {
     color = rgb { 224 5 5 }
     color_ui = rgb { 193 81 81 }
 }
+
 SOV_right_opposition = {
 	color = rgb { 230 0 0 }
 	color_ui = rgb { 255 51 51 }
@@ -867,18 +944,6 @@ russian_empire = {
 SOV_ROME = {
 	color = rgb { 128 0 128 }
 	color_ui = rgb { 128 0 128 }
-}
-KOR_1945 = {
-	color = rgb { 196 104 104 }
-	color_ui = rgb { 196 104 104 }
-}
-WGR = {
-    color = rgb { 195 236 230 } # The colors are set to be more are less what we are used to
-    color_ui = rgb { 225 255 255 }
-}
-DDR = {
-    color = rgb { 120 150 80 }
-    color_ui = rgb { 150 180 120 }
 }
 ETH_African_Union_communism = {
 	color = rgb { 186 46 46 }
@@ -1033,119 +1098,39 @@ SWI_helvetic_republic = {
 	color = rgb { 0 54 163 }
 	color_ui = rgb { 140 140 140 }
 }
-VIN_VIETNAM_UNIFIED = {
-	color = rgb {240 37 29}
-	color_ui = rgb {240 37 29}
+
+MIL_LAI = {
+	color = rgb { 200 100 31 }
+	color_ui = rgb { 245 123 38 }
 }
-VIN_INDERED = {
-	color = rgb {140 4 5}
-	color_ui = rgb {140 4 5}
+
+FRE_LAI = {
+	color = rgb { 255 222 94 }
+	color_ui = rgb { 255 222 94 }
 }
-KHU_JAP = {
-	color = hsv { 0.05 0.3 1 }
-	color_ui = hsv { 0.05 0.25 1.2 }
+
+YES_LAI = {
+	color = rgb { 242 205 94 }
+	color_ui = rgb { 255 255 122 }
 }
-TAW_JAP = {
-	color = hsv { 0.05 0.3 1 }
-	color_ui = hsv { 0.05 0.25 1.2 }
+IBE_BRA = {
+	color = rgb { 0  80  152 }
+	color_ui = rgb { 220  105  70 }
 }
-CHO_JAP = {
-	color = hsv { 0.05 0.3 1 }
-	color_ui = hsv { 0.05 0.25 1.2 }
+
+
+
+LAI_FRA = {
+    color = rgb { 19 131 196 }
+	color_ui = rgb { 19 131 196 }
 }
-MNE_JAP = {
-	color = hsv { 0.05 0.3 1 }
-	color_ui = hsv { 0.05 0.25 1.2 }
+
+LAI_ENG = {
+    color = rgb { 204 0 0 }
+	color_ui = rgb { 35 35 35 }
 }
-JID_JAP = {
-	color = hsv { 0.05 0.3 1 }
-	color_ui = hsv { 0.05 0.25 1.2 }
-}
-CH1_SHANG_JAP = {
-	color = hsv { 0.05 0.3 1 }
-	color_ui = hsv { 0.05 0.25 1.2 }
-}
-CHI_PGOFROC = {
-	color = hsv { 0.07 0.2 1 }
-	color_ui = hsv { 0.07 0.15 1.2 }
-}
-CHI_YS_COLO = {
-	color = rgb{ 206 90 90 }
-	color_ui = rgb{ 206 90 90 }
-}
-KTC_JAP = {
-	color = hsv { 0.05 0.3 1 }
-	color_ui = hsv { 0.05 0.25 1.2 }
-}
-INS_JAP = {
-	color = rgb { 159 52 77 }
-	color_ui = rgb { 159 52 77 }
-}
-NRB = {
-	color = rgb { 145 49 73 }
-	color_ui = rgb { 130 19 46 }
-}
-PHI_JAP = {
-	color = rgb { 189 100 127 }
-	color_ui = rgb { 189 100 127 }
-}
-UPH = {
-	color = rgb { 71 124 178 }
-	color_ui = rgb { 71 124 178 }
-}
-SPH = {
-	color = rgb { 244 48 58 }
-	color_ui = rgb {244 48 58 }
-}
-JAP_win = {
-	color = rgb { 130 19 46 }
-	color_ui = rgb { 130 19 46 }
-}
-MAL_SHO_JAP_TNO = {
-	color = rgb { 184 99 120 }
-	color_ui = rgb { 184 99 120 }
-}
-MAN_TNO = {
-	color = rgb { 179 66 96 }
-	color_ui = rgb { 179 66 96 }
-}
-MEN_TNO = {
-	color = rgb { 165 71 94 }
-	color_ui = rgb { 165 71 94 }
-}
-CHI_TNO = {
-	color = rgb { 168 45 75 }
-	color_ui = rgb { 168 45 75 }
-}
-XSM_TNO = {
-	color = rgb { 86 91 125 }
-	color_ui = rgb { 86 91 125 }
-}
-GDC_TNO = {
-	color = rgb { 122 46 65 }
-	color_ui = rgb { 122 46 65 }
-}
-CH2_TNO = {
-	color = rgb { 140 72 89 }
-	color_ui = rgb { 140 72 89 }
-}
-GXC_TNO = {
-	color = rgb { 137 74 82 }
-	color_ui = rgb { 137 74 82 }
-}
-YUN_TNO = {
-	color = rgb { 135 81 103 }
-	color_ui = rgb { 135 81 103 }
-}
-USA_TNO = {
-	color = rgb { 100 138 190 }
-	color_ui = rgb { 100 138 190 }
-}
-GUZ_TNO = {
-	color = rgb { 165 81 87 }
-	color_ui = rgb { 165 81 87 }
-}
-MAN_QING = {
-	color = rgb { 252 185 63 }
-	color_ui = rgb { 252 185 63 }
+
+LAI_SOV = {
+    color = rgb { 160  8  8 }
+	color_ui = rgb { 180  8  8 }
 }

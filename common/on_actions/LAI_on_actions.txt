@@ -1,0 +1,1995 @@
+on_actions = {
+    ## 스타트 이벤트
+    on_startup = {
+		effect = {
+			every_country = {
+                country_event = {
+                    id = sta.1
+      			}
+			}
+			LAI = {
+                activate_advisor = LAI_duarte_jose_pacheco
+				activate_advisor = LAI_Alfredo_da_silva
+				activate_advisor = LAI_juan_negrine
+			}
+		}
+	}
+	
+	on_state_control_changed = {
+	
+    effect = {
+	  if = {
+		  limit = { 
+	      has_global_flag = YUG_DEADS
+	      NOT = { has_global_flag = YUG_NOTDEAD }
+		  NOT = {
+		  tag = GER #점령국 - 독일 빼고 다
+		  }
+		  FROM.FROM = { state = 64 } #점령 주 - 마드리드
+	      }
+          set_country_flag = YUG_NOTDEAD
+	      GER = { remove_from_faction = CRO }
+		  GER = { remove_from_faction = MNT }
+          YUG = {
+	      annex_country = { target = CRO transfer_troops = yes }
+		  annex_country = { target = MNT transfer_troops = yes }
+	      transfer_state = 913
+	      transfer_state = 853
+	      transfer_state = 102
+	      transfer_state = 915
+	      transfer_state = 926
+	      transfer_state = 45
+     	  transfer_state = 106
+	      transfer_state = 803
+	      transfer_state = 920
+	      transfer_state = 921
+	      }
+	   }
+	
+	
+	  # 이베리안 네임
+	  if = {
+		  limit = {
+		  tag = GER #점령국 - 독일국
+		  FROM.FROM = { state = 41 } #점령 주 - 마드리드
+		  }
+          FROM.FROM = {
+	      set_state_name = "노이프로이센"	
+		  }
+          set_province_name = {
+          id = 3938
+          name = "노이프로이센"
+          }
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			  NOT = {
+			     OR = {
+			     tag = GER
+			     tag = AUS
+			     }
+			  }
+			}
+			FROM.FROM = { state = 41 }
+	   }
+	   
+	   41 = {
+	   reset_state_name = yes
+	   }
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 3938
+          name = "마드리드"
+       }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = LAI #점령국 - 이베리아
+		  FROM.FROM = { state = 123 } #점령 주 - 콘월
+		  }
+          FROM.FROM = {
+	      set_state_name = "코네워르스"	
+		  }
+          set_province_name = {
+          id = 540
+          name = "플리시아엥카"
+          }
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			  NOT = {
+			  tag = LAI
+			  }
+			}
+			FROM.FROM = { state = 123 }
+	   }
+	   
+	   123 = {
+	   reset_state_name = yes
+	   }
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 540
+          name = "플리머스"
+       }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = LAI #점령국 - 이베리아
+		  FROM.FROM = { state = 126 } #점령 주 - 그레이터런던
+		  }
+          FROM.FROM = {
+	      set_state_name = "누에바발렌시아"	
+		  }
+          set_province_name = {
+          id = 6103
+          name = "누에바발렌시아"
+          }
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			  NOT = {
+			  tag = LAI
+			  }
+			}
+			FROM.FROM = { state = 126 }
+	   }
+	   
+	   126 = {
+	   reset_state_name = yes
+	   }
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발! <==== 게이야 ㅋㅋ
+          id = 6103
+          name = "런던"
+       }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = LAI #점령국 - 이베리아
+		  FROM.FROM = { state = 948 } #점령 주 - 안도라라벨랴
+		  }
+          FROM.FROM = {
+	      set_state_name = "안도라라베야"	
+		  }
+          set_province_name = {
+          id = 13258
+          name = "안도라라베야"
+          }
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			  tag = AND
+			}
+			FROM.FROM = { state = 948 }
+	   }
+	   
+	   948 = {
+	   reset_state_name = yes
+	   }
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 13258
+          name = "안도라라벨랴"
+       }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = FRA #점령국 - 프랑스
+		  FROM.FROM = { state = 948 } #점령 주 - 안도라라벨랴
+		  }
+          FROM.FROM = {
+	      set_state_name = "앙도르라비에유"	
+		  }
+          set_province_name = {
+          id = 13258
+          name = "앙도르라비에유"
+          }
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			  tag = AND
+			}
+			FROM.FROM = { state = 948 }
+	   }
+	   
+	   948 = {
+	   reset_state_name = yes
+	   }
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 13258
+          name = "안도라라벨랴"
+       }
+	   
+	   }
+	   
+	   
+	   ## 타국 네임
+	   if = {
+		  limit = {
+		  tag = GER #점령국 - 독일국
+		  FROM.FROM = { state = 28 } #점령 주 - 알자스-로렌
+		  }
+		  FROM.FROM = {
+	      set_state_name = "엘자스-로트링겐"	
+		  }
+          set_province_name = {
+          id = 9503
+          name = "슈트라스부르크"
+          }
+		  set_province_name = {
+          id = 9559
+          name = "메츠"
+          }
+		  set_province_name = {
+          id = 678
+          name = "뮐하우젠"
+          }
+		  
+		  add_state_core = 28
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			tag = FRA
+			}
+			FROM.FROM = { state = 28 }
+	   }
+	   28 = {
+	   reset_state_name = yes
+	   }
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 9503
+          name = "스트라스부르"
+       }
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 9559
+          name = "메스"
+       }
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 678
+          name = "뮐루즈"
+       }
+	   GER = { remove_state_core = 28 }
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = GER #점령국 - 독일국
+		  GER = { has_government = fascism }
+		  FROM.FROM = { state = 29 } #점령 주 - 노르파드칼레
+		  }
+          set_province_name = {
+          id = 11483
+          name = "히틀러스베르크"
+          }
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			  NOT = {
+			     OR = {
+			     tag = GER
+			     tag = AUS
+			     }
+			  }
+			}
+			FROM.FROM = { state = 29 }
+	   }
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 11483
+          name = "릴"
+       }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = GER #점령국 - 독일국
+		  FROM.FROM = { state = 970 } #점령 주 - 슈스크란트 운하
+		  }
+          FROM.FROM = {
+	      set_state_name = "킬 운하"	
+		  }
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			  NOT = {
+			     OR = {
+			     tag = GER
+			     tag = AUS
+			     }
+			  }
+			}
+			FROM.FROM = { state = 970 }
+	   }
+	   
+	   970 = {
+	   reset_state_name = yes
+	   }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = GER #점령국 - 독일국
+		  FROM.FROM = { state = 762 } #점령 주 - 카토비체
+		  }
+          FROM.FROM = {
+	      set_state_name = "카토비츠"	
+		  }
+          set_province_name = {
+          id = 6464
+          name = "카토비츠"
+          }
+		  add_state_core = 762
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			  NOT = {
+			     OR = {
+			     tag = GER
+			     tag = AUS
+			     }
+			  }
+			}
+			FROM.FROM = { state = 762 }
+	   }
+	   
+	   762 = {
+	   reset_state_name = yes
+	   }
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 6464
+          name = "카토비체"
+       }
+	   GER = { remove_state_core = 762 }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = GER #점령국 - 독일국
+		  FROM.FROM = { state = 86 } #점령 주 - 포즈난
+		  }
+          FROM.FROM = {
+	      set_state_name = "포젠"	
+		  }
+          set_province_name = {
+          id = 6558
+          name = "포젠"
+          }
+		  add_state_core = 86
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			  NOT = {
+			     OR = {
+			     tag = GER
+			     tag = AUS
+			     }
+			  }
+			}
+			FROM.FROM = { state = 86 }
+	   }
+	   
+	   86 = {
+	   reset_state_name = yes
+	   }
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 6558
+          name = "포즈난"
+       }
+	   GER = { remove_state_core = 86 }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = GER #점령국 - 독일국
+		  FROM.FROM = { state = 807 } #점령 주 - 그디니아
+		  GER = { has_government = fascism }
+		  }
+          FROM.FROM = {
+	      set_state_name = "그딩겐"	
+		  }
+          set_province_name = {
+          id = 9263
+          name = "고텐하펜"
+          }
+		  add_state_core = 807
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			  NOT = {
+			     OR = {
+			     tag = GER
+			     tag = AUS
+			     }
+			  }
+			}
+			FROM.FROM = { state = 807 }
+	   }
+	   
+	   807 = {
+	   reset_state_name = yes
+	   }
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 9263
+          name = "그디니아"
+       }
+	   GER = { remove_state_core = 807 }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = POL #점령국 - 폴란드 공화국
+		  FROM.FROM = { state = 67 } #점령 주 - 오버슐레지엔
+		  }
+          FROM.FROM = {
+	      set_state_name = "오폴레"	
+		  }
+		  add_state_core = 67
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			    OR = {
+			    tag = GER
+				tag = WGR
+				tag = DDR
+				tag = PRE
+				tag = AUS
+			    }
+			}
+	   }
+	   
+	   67 = {
+	   reset_state_name = yes
+	   }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = POL #점령국 - 폴란드 공화국
+		  FROM.FROM = { state = 66 } #점령 주 - 니더슐레지엔
+		  }
+          FROM.FROM = {
+	      set_state_name = "들니실롱스크"	
+		  }
+		  add_state_core = 66
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			    OR = {
+			    tag = GER
+				tag = WGR
+				tag = DDR
+				tag = PRE
+				tag = AUS
+			    }
+			}
+	   }
+	   
+	   66 = {
+	   reset_state_name = yes
+	   }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = POL #점령국 - 폴란드 공화국
+		  FROM.FROM = { state = 5 } #점령 주 - 하부 쾨니히스베르크
+		  }
+          FROM.FROM = {
+	      set_state_name = "바르미아마주리"	
+		  }
+		  set_province_name = {
+          id = 6375
+          name = "바르미아마주리"
+          }
+		  add_state_core = 5
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			    OR = {
+			    tag = GER
+				tag = WGR
+				tag = DDR
+				tag = PRE
+				tag = AUS
+			    }
+			}
+	   }
+	   
+	   5 = {
+	   reset_state_name = yes
+	   }
+	   set_province_name = {
+          id = 6375
+          name = "알렌슈타인"
+       }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = POL #점령국 - 폴란드 공화국
+		  FROM.FROM = { state = 68 } #점령 주 - 오스트마르크
+		  }
+          FROM.FROM = {
+	      set_state_name = "루부시"	
+		  }
+		  add_state_core = 68
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			    OR = {
+			    tag = GER
+				tag = WGR
+				tag = DDR
+				tag = PRE
+				tag = AUS
+			    }
+			}
+	   }
+	   
+	   68 = {
+	   reset_state_name = yes
+	   }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = POL #점령국 - 폴란드 공화국
+		  FROM.FROM = { state = 63 } #점령 주 - 힌터포메른
+		  }
+          FROM.FROM = {
+	      set_state_name = "포모제"	
+		  }
+		  add_state_core = 63
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			    OR = {
+			    tag = GER
+				tag = WGR
+				tag = DDR
+				tag = PRE
+				tag = AUS
+			    }
+			}
+	   }
+	   
+	   63 = {
+	   reset_state_name = yes
+	   }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  OR = {
+		  tag = GER #점령국 - 독일국 혹은 오스트리아
+		  tag = AUS
+		  }
+		  FROM.FROM = { state = 9 } #점령 주 - 보헤미아
+		  }
+          FROM.FROM = {
+	      set_state_name = "뵈멘"	
+		  }
+          set_province_name = {
+          id = 11542
+          name = "프라크"
+          }
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			  NOT = {
+			     OR = {
+			     tag = GER
+			     tag = AUS
+			     }
+			  }
+			}
+			FROM.FROM = { state = 9 }
+	   }
+	   
+	   9 = {
+	   reset_state_name = yes
+	   }
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 11542
+          name = "프라하"
+       }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  OR = {
+		  tag = GER #점령국 - 독일국 혹은 오스트리아
+		  tag = AUS
+		  }
+		  FROM.FROM = { state = 75 } #점령 주 - 모라비아
+		  }
+          FROM.FROM = {
+	      set_state_name = "메렌"	
+		  }
+          set_province_name = {
+          id = 3569
+          name = "브륀"
+          }
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			  NOT = {
+			     OR = {
+			     tag = GER
+			     tag = AUS
+			     }
+			  }
+			}
+			FROM.FROM = { state = 75 }
+	   }
+	   
+	   75 = {
+	   reset_state_name = yes
+	   }
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 3569
+          name = "브르노"
+       }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = GER #점령국 - 독일국
+		  FROM.FROM = { state = 188 } #점령 주 - 메멜
+		  }
+          FROM.FROM = {
+	      set_state_name = "메멜"	
+		  }
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			original_tag = LIT
+			}
+			FROM.FROM = { state = 188 }
+	   }
+	   
+	   188 = {
+	   reset_state_name = yes
+	   }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = FER #점령국 - 러시아 공화국 혹은 극동 공화국 근데 후자는 가능은 하냐?
+		  FROM.FROM = { state = 195 } #점령 주 - 레닌그라드
+		  }
+          FROM.FROM = {
+	      set_state_name = "상트페테르부르크"	
+		  }
+          set_province_name = {
+          id = 3151
+          name = "상트페테르부르크"
+          }
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			  OR = {
+			  original_tag = SOV
+			  original_tag = KHA
+			  }
+			}
+			FROM.FROM = { state = 195 }
+	   }
+	   
+	   195 = {
+	   reset_state_name = yes
+	   }
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 3151
+          name = "레닌그라드"
+       }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = FER #점령국 - 러시아 공화국 혹은 극동 공화국 근데 후자는 가능은 하냐?
+		  FROM.FROM = { state = 217 } #점령 주 - 레닌그라드
+		  }
+          FROM.FROM = {
+	      set_state_name = "볼고그라드"	
+		  }
+          set_province_name = {
+          id = 3529
+          name = "볼고그라드"
+          }
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			  OR = {
+			  original_tag = SOV
+			  original_tag = KHA
+			  }
+			}
+			FROM.FROM = { state = 217 }
+	   }
+	   
+	   217 = {
+	   reset_state_name = yes
+	   }
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 3529
+          name = "스탈린그라드"
+       }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = POL #점령국 - 폴란드 공화국
+		  FROM.FROM = { state = 763 } #점령 주 - 쾨니히스베르크
+		  }
+          FROM.FROM = {
+	      set_state_name = "크룰레비에츠"	
+		  }
+          set_province_name = {
+          id = 6332
+          name = "크룰레비에츠"
+          }
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			  OR = {
+			  tag = GER
+			  original_tag = PRE
+			  original_tag = WGR
+			  original_tag = DDR
+			  }
+			}
+			FROM.FROM = { state = 763 }
+	   }
+	   
+	   763 = {
+	   reset_state_name = yes
+	   }
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 6332
+          name = "쾨니히스베르크"
+       }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = SOV #점령국 - 소비에트 사회주의 공화국 연방
+		  FROM.FROM = { state = 763 } #점령 주 - 쾨니히스베르크
+		  }
+          FROM.FROM = {
+	      set_state_name = "칼리닌그라드"	
+		  }
+          set_province_name = {
+          id = 6332
+          name = "칼리닌그라드"
+          }
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			  OR = {
+			  tag = GER
+			  original_tag = PRE
+			  original_tag = WGR
+			  original_tag = DDR
+			  }
+			}
+			FROM.FROM = { state = 29 }
+	   }
+	   
+	   29 = {
+	   reset_state_name = yes
+	   }
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 6332
+          name = "쾨니히스베르크"
+       }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = FRA #점령국 - 프랑스 공화국
+		  FROM.FROM = { state = 963 } #점령 주 - 사보이아
+		  }
+          FROM.FROM = {
+	      set_state_name = "사부아"	
+		  }
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			  tag = ITA
+			}
+			FROM.FROM = { state = 963 }
+	   }
+	   
+	   963 = {
+	   reset_state_name = yes
+	   }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = ITA #점령국 - 이탈리아 왕국
+		  FROM.FROM = { state = 964 } #점령 주 - 알프마리팀
+		  }
+          set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 9909
+          name = "니차"
+          }
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			  tag = FRA
+			}
+			FROM.FROM = { state = 964 }
+	   }
+	   
+	   set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 9909
+          name = "니스"
+       }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = SOV #점령국 - 소비에트 연방
+		  FROM.FROM = { state = 146 } #점령 주 - 카리알라 
+		  }
+          add_state_core = 146
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			tag = FIN
+			}
+			FROM.FROM = { state = 146 }
+	   }
+	   
+	   SOV = { remove_state_core = 146 }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = SOV #점령국 - 소비에트 연방
+		  FROM.FROM = { state = 147 } #점령 주 - 살라 
+		  }
+          add_state_core = 147
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			tag = FIN
+			}
+			FROM.FROM = { state = 147 }
+	   }
+	   
+	   SOV = { remove_state_core = 147 }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = SOV #점령국 - 소비에트 연방
+		  FROM.FROM = { state = 537 } #점령 주 - 사할린 남부 
+		  }
+          add_state_core = 537
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			tag = JAP
+			}
+			FROM.FROM = { state = 537 }
+	   }
+	   
+	   SOV = { remove_state_core = 537 }
+	   
+	   }
+	   
+	   if = {
+		  limit = {
+		  tag = SOV #점령국 - 소비에트 연방
+		  FROM.FROM = { state = 766 } #점령 주 - 베사라비아 남부 
+		  }
+          add_state_core = 766
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			tag = ROM
+			}
+			FROM.FROM = { state = 766 }
+	   }
+	   
+	   SOV = { remove_state_core = 766 }
+	   
+	   }
+	   if = {
+		  limit = {
+		  tag = SOV #점령국 - 소비에트 연방
+		  FROM.FROM = { state = 78 } #점령 주 - 베사라비아 북부 
+		  }
+          add_state_core = 78
+	   }
+	   if = {
+	   
+	   limit = {
+			ROOT = {
+			tag = ROM
+			}
+			FROM.FROM = { state = 78 }
+	   }
+	   
+	   SOV = { remove_state_core = 78 }
+	   
+	   }
+	   
+	   
+	}
+	
+	}
+	
+	on_declare_war = {
+      effect = {
+	      if = {
+              limit = {
+                  tag = LAI
+				  FROM = { tag = ENG }
+				  NOT = { has_global_flag = Declared_war_to_british } 
+              }
+              add_timed_idea = {
+				idea = LAI_idea_british_attacks
+				days = 800
+			  }
+			  set_global_flag = Declared_war_to_british
+          }
+	     
+          if = {
+              limit = {
+                  tag = ITA
+				  FROM = { tag = FRA }
+				  NOT = { has_global_flag = Il_duce_speeched } 
+              }
+              play_song = "SPEECH_ADOLF_HITLER_ANNEX_OF_AUSTRIA"
+			  set_global_flag = Il_duce_speeched
+          }
+		  
+		  if = {
+              limit = {
+                  tag = JAP
+				  FROM = { tag = CHI }
+				  NOT = { has_global_flag = second_sino_japansese_war_started } 
+              }
+              CHI = {
+			    add_timed_idea = {
+				  idea = CHI_chinese_unity_2
+				  days = 3000
+			    }
+			  }
+			  set_global_flag = second_sino_japansese_war_started
+          }
+		  
+		  if = {
+              limit = {
+                  tag = GER
+				  GER  = { has_completed_focus = GER_mol_rib_pact }
+				  FROM = { tag = POL }
+				  NOT = { has_global_flag = WW2_STARTED } 
+              }
+              SOV = {
+			  declare_war_on = {
+				target = POL
+				type = take_state_focus
+				generator = { 89 91 93 94 95 96 910 97 929 784 }
+		      }
+			
+			  }
+			  set_global_flag = WW2_STARTED
+          }
+		  
+		  if = {
+              limit = {
+			      tag = ITA
+				  FROM = { tag = GRE }
+				  NOT = { has_global_flag = Il_duce_wared_to_greece } 
+              }
+             
+			  add_timed_idea = {
+				idea = ITA_WAR_WITH_GREECE
+				days = 150
+			  }
+			  set_global_flag = Il_duce_wared_to_greece
+			  
+			  if = {
+			  limit = { GER = { is_in_faction_with = ITA } }
+			  GER = {
+			  add_timed_idea = {
+				idea = ITA_WAR_WITH_GREECE
+				days = 150
+			  }
+			  
+			  }
+			  
+			  }
+			  
+			  if = {
+			  limit = { HUN = { is_in_faction_with = ITA } }
+			  HUN = {
+			  add_timed_idea = {
+				idea = ITA_WAR_WITH_GREECE
+				days = 150
+			  }
+			  
+			  }
+			  
+			  }
+			  
+			  if = {
+			  limit = { SLO = { is_in_faction_with = ITA } }
+			  SLO = {
+			  add_timed_idea = {
+				idea = ITA_WAR_WITH_GREECE
+				days = 150
+			  }
+			  
+			  }
+			  
+			  }
+			  
+			  if = {
+			  limit = { BUL = { is_in_faction_with = ITA } }
+			  BUL = {
+			  add_timed_idea = {
+				idea = ITA_WAR_WITH_GREECE
+				days = 150
+			  }
+			  
+			  }
+			  
+			  }
+          }
+		  
+       }
+    }
+	
+	on_capitulation = {
+	
+    effect = {
+	
+	if = {
+	limit = { 
+	NOT = { has_global_flag = AOI_DEAD }
+	AOI = { 
+	has_war_with = ENG
+    is_in_faction_with = ITA
+	NOT = {
+	controls_state = 271
+	}
+	
+	}
+	
+	}
+	
+	set_global_flag = AOI_DEAD
+	ETH = { 
+	annex_country = { target = AOI }
+	}
+	ENG = { 
+	add_to_faction = ETH 
+	transfer_state = 269
+	transfer_state = 903
+	}
+	FRA = {
+	transfer_state = 268
+	}
+	ITA = {
+	transfer_state = 844
+	transfer_state = 559
+	}
+	
+	}
+	
+	if = {
+	limit = { 
+	has_global_flag = WW2_STARTED
+	NOT = { has_global_flag = POL_DEADS }
+	POL = { 
+	has_war_with = GER
+	has_war_with = SOV
+    is_in_faction_with = ENG
+	}
+	
+	}
+	
+	set_global_flag = POL_DEADS
+	SOV = { 
+	white_peace = ENG
+    white_peace = FRA
+    white_peace = USA	
+	white_peace = POL
+	transfer_state = 89
+	transfer_state = 91
+	transfer_state = 93
+	transfer_state = 94
+	transfer_state = 95
+	transfer_state = 96
+	transfer_state = 910
+	transfer_state = 97
+	}
+	LIT = {
+	transfer_state = 929
+	transfer_state = 784
+	}
+	POL = {
+	remove_state_core = 89
+	remove_state_core = 91
+	remove_state_core = 93
+	remove_state_core = 94
+	remove_state_core = 95
+	remove_state_core = 96
+	remove_state_core = 910
+	remove_state_core = 929
+	remove_state_core = 784
+	}
+	
+	}
+	
+	if = {
+	limit = { 
+	DEN = { 
+	has_war_with = GER
+    is_in_faction_with = ENG
+	NOT = {
+	is_subject_of = GER
+	}
+	
+	}
+	GER = { has_government = fascism }
+	NOT = { has_global_flag = DEN_REICHSPROTACTED }
+	}
+	
+	DEN = {
+	    GER = {
+	 	puppet = PREV
+	    set_autonomy = { target = PREV autonomy_state = autonomy_reichsprotectorate }
+		}
+	        create_country_leader = {
+			name = "Christian Peder Kryssing"
+		    desc = ""
+		    picture = GFX_portrait_Christian_Peder_Kryssing
+		    expire = "1965.1.1"
+		    ideology = nazism
+	        traits = {
+		          }
+	        }  
+	white_peace = GER
+	add_ideas = idea_den_christian
+	set_cosmetic_tag = DEN_REICHSPAKT
+	transfer_state = 37
+	transfer_state = 99
+	}
+	GER = {
+	    transfer_state = 909
+		transfer_state = 943
+		add_state_core = 909
+		add_state_core = 943
+		transfer_state = 970
+	}
+	909 = {
+    set_state_name = "슐레스비히"
+    }
+    58 = {
+	set_state_name = "홀슈타인"
+    }
+	970 = {
+	set_state_name = "킬 운하"
+    }
+	news_event = { id = lai_news.1016 hours = 4 }
+	set_global_flag = DEN_REICHSPROTACTED
+	ENG = { 
+	transfer_state = 101 
+	transfer_state = 337
+	}
+	ICE = { 
+	transfer_state = 100 
+	}
+	news_event = { id = news.331 hours = 4 }
+	
+	}
+	
+	if = {
+	limit = { 
+	has_global_flag = DEN_REICHSPROTACTED
+	DEN = {
+	OR = {
+	has_war_with = ENG 
+	has_war_with = FRA
+	has_war_with = SOV
+	has_war_with = USA
+	}
+	has_government = fascism
+	surrender_progress > 0.8
+	}
+	
+	}
+	
+	GER = { 
+	set_autonomy = { target = DEN autonomy_state = autonomy_free } 
+	remove_from_faction = DEN
+	}
+	DEN = {  
+	declare_war_on = {
+	target = GER
+	type = take_state_focus
+	generator = { 909 943 }
+	}
+	drop_cosmetic_tag = DEN_REICHSPAKT
+	set_politics = {
+    ruling_party = democratic
+	elections_allowed = yes
+	}
+	add_popularity = {
+	ideology = democratic
+	popularity = 0.8
+    }
+	white_peace = ENG
+    white_peace = FRA
+    white_peace = USA	
+	white_peace = SOV
+	white_peace = LAI
+	transfer_state = 101
+	transfer_state = 337
+	}
+	ENG = { add_to_faction = DEN }
+	
+	}
+	
+	if = {
+	limit = { 
+	has_global_flag = WW2_STARTED
+	NOT = { has_global_flag = YUG_DEADS }
+	YUG = { 
+	has_war_with = GER
+	has_war_with = ITA
+    is_in_faction_with = ENG
+	surrender_progress > 0.6
+	}
+	
+	}
+	
+	set_global_flag = YUG_DEADS
+	CRO = { 
+	transfer_state = 103
+	transfer_state = 109
+	transfer_state = 914
+	transfer_state = 104
+	transfer_state = 804
+	}
+	ITA = {
+	transfer_state = 913
+	transfer_state = 853
+	}
+	if = {
+	limit = {
+	ALB = { exists = no }
+	}
+	  ITA  = {
+	  transfer_state = 920
+	  transfer_state = 921
+	  }
+	}
+	GER = {
+	transfer_state = 102
+	}
+	HUN = {
+	transfer_state = 915
+	transfer_state = 926
+	transfer_state = 45
+	}
+	BUL = {
+	transfer_state = 803
+	transfer_state = 106
+	}
+	GER = {
+	add_to_faction = CRO
+	}
+	
+	}
+	
+	
+	
+	}
+	
+    }
+	
+	
+	    
+		
+	## 아나키 이베리아 내전 승리 세이브 ##
+	
+	# if = {
+		# limit = {
+		   #  tag = LAI
+		   #  NOT = {
+			   #  has_war_with = IBE
+			   #  has_country_flag = win_of_the_anarchys
+		    # }
+			# controls_state = 41
+			# controls_state = 112
+		# }
+		# LAI = {
+			# set_country_flag = win_of_the_anarchys
+			# complete_national_focus = win_of_the_civil_war_yeahhh
+		# }	
+	# }
+	# 비록 지금까지는 세이브만 하지만 나중엔 진짜로 쓸거임!!
+	
+	
+	
+	#Japanese Manchuria
+	on_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					AND = { 
+						TAG = JAP
+						is_subject_of = MAN
+					}
+				}
+				set_cosmetic_tag = JAP_MAN
+			}
+		}
+	}
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					AND = { 
+						TAG = JAP
+						is_subject_of = MAN
+					}
+				}
+				set_cosmetic_tag = JAP_MAN
+			}
+		}
+	}
+	#French Iberia
+	on_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					AND = { 
+						TAG = LAI
+						is_subject_of = FRA
+					}
+				}
+				set_cosmetic_tag = LAI_FRA
+			}
+		}
+	}
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					AND = { 
+						TAG = LAI
+						is_subject_of = FRA
+					}
+				}
+				set_cosmetic_tag = LAI_FRA
+			}
+		}
+	}
+	#Englant Iberia
+	on_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					AND = { 
+						TAG = LAI
+						is_subject_of = ENG
+					}
+				}
+				set_cosmetic_tag = LAI_ENG
+			}
+		}
+	}
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					AND = { 
+						TAG = LAI
+						is_subject_of = ENG
+					}
+				}
+				set_cosmetic_tag = LAI_ENG
+			}
+		}
+	}
+	#Sovie Iberia
+	on_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					AND = { 
+						TAG = LAI
+						is_subject_of = SOV
+					}
+				}
+				set_cosmetic_tag = LAI_SOV
+			}
+		}
+	}
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					AND = { 
+						TAG =LAI
+						is_subject_of = SOV
+					}
+				}
+				set_cosmetic_tag = LAI_SOV
+			}
+		}
+	}
+	
+	# 브리튼 이베리아 행정부
+	on_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					AND = { 
+						TAG = ENG
+						is_subject_of = LAI
+					}
+				}
+				set_cosmetic_tag = ENG_LAI_PUPPET
+				add_stability = -0.2
+				remove_ideas = stiff_upper_lip
+				if = {
+				limit = {
+				LAI = { has_government = democratic }
+				}
+				create_country_leader = {
+						name = "브리튼 이베리아 행정부"
+						desc = ""
+						picture = Portrait_BRA_CHONGDOKBU
+						expire = "1965.1.1"
+						ideology = liberalism
+						traits = {
+						}
+					}
+				}
+				if = {
+				limit = {
+				LAI = { has_government = fascism }
+				}
+				create_country_leader = {
+						name = "조제 멘드스 카베사다스"
+						desc = ""
+						picture = gfx/leaders/LAI/portrait_por_jose_mendes_cabecadas
+						expire = "1965.1.1"
+						ideology = falangism
+						traits = {
+						iberian_naval_leader
+						}
+					}
+				}
+				if = {
+				limit = {
+				LAI = { has_government = neutrality }
+				}
+				create_country_leader = {
+						name = "안토니우 드 올리베이라 살라자르"
+						desc = ""
+						picture = gfx/leaders/LAI/portrait_LAI_antonio_de_oliveira_salazar.dds
+						expire = "1965.1.1"
+						ideology = centrism
+						traits = {
+						popular_man
+						}
+					}
+				}
+				if = {
+				limit = {
+				LAI = { has_government = communism }
+				}
+				create_country_leader = {
+						name = "호세 미아자"
+						desc = ""
+						picture = gfx/leaders/SPR/portrait_spr_jose_miaja.dds
+						expire = "1965.1.1"
+						ideology = marxism
+						traits = {
+						iberian_army_leader
+						}
+					}
+				}
+				set_rule = { can_create_factions = no }
+		        set_rule = { can_guarantee_other_ideologies = no }
+		        set_rule = { can_puppet = no }
+		        set_rule = { can_force_government = no }
+		        set_rule = { can_join_factions = no }
+		        set_rule = { can_boost_own_ideology = no }
+		        set_rule = { can_generate_female_aces = yes }
+		        set_rule = { can_create_collaboration_government = no }
+				load_focus_tree = ENG_LAIBERIA_FOCUS
+				remove_state_core = 918
+				remove_state_core = 119
+				remove_ideas = ENG_king_edward
+				remove_ideas = ENG_king_edward_fascism
+				remove_ideas = ENG_george_vi
+				add_ideas = IBERIAN_GANGJUM
+				every_unit_leader = {
+					limit = {
+						has_id = 996
+					}
+					set_nationality = LAI
+				}
+				set_party_name = { 
+                ideology = democratic 
+                long_name = IBE_Chongdonkbu_Long
+                name = IBE_Chongdokbu
+                }
+				set_party_name = { 
+                ideology = fascism 
+                long_name = IBE_Chongdonkbu_Long
+                name = IBE_Chongdokbu
+                }
+				set_party_name = { 
+                ideology = neutrality 
+                long_name = IBE_Chongdonkbu_Long
+                name = IBE_Chongdokbu
+                }
+				set_party_name = { 
+                ideology = communism 
+                long_name = IBE_Chongdonkbu_Long
+                name = IBE_Chongdokbu
+                }
+			}
+		}
+	}
+	
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					AND = { 
+						TAG = ENG
+						is_subject_of = LAI
+					}
+				}
+				set_cosmetic_tag = ENG_LAI_PUPPET
+				add_stability = -0.2
+				remove_ideas = stiff_upper_lip
+				if = {
+				limit = {
+				LAI = { has_government = democratic }
+				}
+				create_country_leader = {
+						name = "브리튼 이베리아 행정부"
+						desc = ""
+						picture = Portrait_BRA_CHONGDOKBU
+						expire = "1965.1.1"
+						ideology = liberalism
+						traits = {
+						}
+					}
+				}
+				if = {
+				limit = {
+				LAI = { has_government = fascism }
+				}
+				create_country_leader = {
+						name = "조제 멘드스 카베사다스"
+						desc = ""
+						picture = "gfx/leaders/LAI/portrait_por_jose_mendes_cabecadas.dds"
+						expire = "1965.1.1"
+						ideology = falangism
+						traits = {
+						iberian_naval_leader
+						}
+					}
+				}
+				if = {
+				limit = {
+				LAI = { has_government = neutrality }
+				}
+				create_country_leader = {
+						name = "안토니우 드 올리베이라 살라자르"
+						desc = ""
+						picture = GFX_Portrait_por_antonio_de_oliveira_salazar
+						expire = "1965.1.1"
+						ideology = centrism
+						traits = {
+						popular_man
+						}
+					}
+				}
+				if = {
+				limit = {
+				LAI = { has_government = communism }
+				}
+				create_country_leader = {
+						name = "호세 미아자"
+						desc = ""
+						picture = GFX_portrait_SPR_jose_miaja
+						expire = "1965.1.1"
+						ideology = marxism
+						traits = {
+						iberian_army_leader
+						}
+					}
+				}
+				set_rule = { can_create_factions = no }
+		        set_rule = { can_guarantee_other_ideologies = no }
+		        set_rule = { can_puppet = no }
+		        set_rule = { can_force_government = no }
+		        set_rule = { can_join_factions = no }
+		        set_rule = { can_boost_own_ideology = no }
+		        set_rule = { can_generate_female_aces = yes }
+		        set_rule = { can_create_collaboration_government = no }
+				load_focus_tree = ENG_LAIBERIA_FOCUS
+				remove_state_core = 918
+				remove_state_core = 119
+				remove_ideas = ENG_king_edward
+				remove_ideas = ENG_king_edward_fascism
+				remove_ideas = ENG_george_vi
+				add_ideas = IBERIAN_GANGJUM
+				every_unit_leader = {
+					limit = {
+						has_id = 996
+					}
+					set_nationality = LAI
+				}
+				set_party_name = { 
+                ideology = democratic 
+                long_name = IBE_Chongdonkbu_Long
+                name = IBE_Chongdokbu
+                }
+				set_party_name = { 
+                ideology = fascism 
+                long_name = IBE_Chongdonkbu_Long
+                name = IBE_Chongdokbu
+                }
+				set_party_name = { 
+                ideology = neutrality 
+                long_name = IBE_Chongdonkbu_Long
+                name = IBE_Chongdokbu
+                }
+				set_party_name = { 
+                ideology = communism 
+                long_name = IBE_Chongdonkbu_Long
+                name = IBE_Chongdokbu
+                }
+			}
+		}
+	}
+	
+	# 이베리아 점령하 프랑스
+	on_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					AND = { 
+						TAG = FRA
+						is_subject_of = LAI
+					}
+				}
+				set_cosmetic_tag = IBERIAN_FRAKREICH
+				add_stability = -0.25
+				if = {
+				limit = {
+				LAI = { has_government = democratic }
+				}
+				create_country_leader = {
+						name = "프랑스 이베리아 행정부"
+						desc = ""
+						picture = Portrait_BRA_CHONGDOKBU
+						expire = "1965.1.1"
+						ideology = liberalism
+						traits = {
+						}
+					}
+				}
+				if = {
+				limit = {
+				LAI = { has_government = fascism }
+				}
+				create_country_leader = {
+						name = "루이스 카레로 블랑코"
+						desc = ""
+						picture = "gfx/leaders/LAI/portrait_spa_luis_carrero_blanco.dds"
+						expire = "1965.1.1"
+						ideology = falangism
+						traits = {
+						iberian_naval_leader
+						}
+					}
+				}
+				if = {
+				limit = {
+				LAI = { has_government = neutrality }
+				}
+				create_country_leader = {
+						name = "마누엘 팔 콘데"
+						desc = ""
+						picture = "gfx/leaders/LAI/portrait_spa_manuel_fal_conde.dds"
+						expire = "1965.1.1"
+						ideology = centrism
+						traits = {
+						}
+					}
+				}
+				if = {
+				limit = {
+				LAI = { has_government = communism }
+				}
+				create_country_leader = {
+						name = "엔리케 리스테르"
+						desc = ""
+						picture = "gfx/leaders/LAI/portrait_SPR_enrique_lister.dds"
+						expire = "1965.1.1"
+						ideology = marxism
+						traits = {
+						iberian_army_leader
+						}
+					}
+				}
+				set_rule = { can_create_factions = no }
+		        set_rule = { can_guarantee_other_ideologies = no }
+		        set_rule = { can_puppet = no }
+		        set_rule = { can_force_government = no }
+		        set_rule = { can_join_factions = no }
+		        set_rule = { can_boost_own_ideology = no }
+		        set_rule = { can_generate_female_aces = yes }
+		        set_rule = { can_create_collaboration_government = no }
+				add_ideas = FRANKREICH_GANGJUM
+				load_focus_tree = generic_focus
+				set_party_name = { 
+                ideology = democratic 
+                long_name = IBE_Chongdonkbu_Long
+                name = IBE_Chongdokbu
+                }
+				set_party_name = { 
+                ideology = fascism 
+                long_name = IBE_Chongdonkbu_Long
+                name = IBE_Chongdokbu
+                }
+				set_party_name = { 
+                ideology = neutrality 
+                long_name = IBE_Chongdonkbu_Long
+                name = IBE_Chongdokbu
+                }
+				set_party_name = { 
+                ideology = communism 
+                long_name = IBE_Chongdonkbu_Long
+                name = IBE_Chongdokbu
+                }
+				every_unit_leader = {
+					limit = {
+						has_id = 102
+					}
+					set_nationality = LAI
+				}
+				remove_ideas = FRA_victors_of_wwi
+				remove_ideas = FRA_disjointed_government
+				remove_ideas = FRA_protected_by_the_maginot_line
+				remove_ideas = FRA_political_violence
+				remove_state_core = 917
+				remove_state_core = 459
+				remove_state_core = 460
+				remove_state_core = 931
+				remove_state_core = 932
+				remove_state_core = 934
+				remove_state_core = 513
+				remove_state_core = 933
+				remove_state_core = 514
+				remove_state_core = 1
+				remove_state_core = 735
+			}
+		}
+	}
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					AND = { 
+						TAG = FRA
+						is_subject_of = LAI
+					}
+				}
+				set_cosmetic_tag = IBERIAN_FRAKREICH
+				add_stability = -0.25
+				if = {
+				limit = {
+				LAI = { has_government = democratic }
+				}
+				create_country_leader = {
+						name = "프랑스 이베리아 행정부"
+						desc = ""
+						picture = Portrait_BRA_CHONGDOKBU
+						expire = "1965.1.1"
+						ideology = liberalism
+						traits = {
+						}
+					}
+				}
+				if = {
+				limit = {
+				LAI = { has_government = fascism }
+				}
+				create_country_leader = {
+						name = "루이스 카레로 블랑코"
+						desc = ""
+						picture = "gfx/leaders/LAI/portrait_spa_luis_carrero_blanco.dds"
+						expire = "1965.1.1"
+						ideology = falangism
+						traits = {
+						iberian_naval_leader
+						}
+					}
+				}
+				if = {
+				limit = {
+				LAI = { has_government = neutrality }
+				}
+				create_country_leader = {
+						name = "마누엘 팔 콘데"
+						desc = ""
+						picture = "gfx/leaders/LAI/portrait_spa_manuel_fal_conde.dds"
+						expire = "1965.1.1"
+						ideology = centrism
+						traits = {
+						}
+					}
+				}
+				if = {
+				limit = {
+				LAI = { has_government = communism }
+				}
+				create_country_leader = {
+						name = "엔리케 리스테르"
+						desc = ""
+						picture = "gfx/leaders/LAI/portrait_SPR_enrique_lister.dds"
+						expire = "1965.1.1"
+						ideology = marxism
+						traits = {
+						iberian_army_leader
+						}
+					}
+				}
+				set_rule = { can_create_factions = no }
+		        set_rule = { can_guarantee_other_ideologies = no }
+		        set_rule = { can_puppet = no }
+		        set_rule = { can_force_government = no }
+		        set_rule = { can_join_factions = no }
+		        set_rule = { can_boost_own_ideology = no }
+		        set_rule = { can_generate_female_aces = yes }
+		        set_rule = { can_create_collaboration_government = no }
+				add_ideas = FRANKREICH_GANGJUM
+				load_focus_tree = generic_focus
+				set_party_name = { 
+                ideology = democratic 
+                long_name = IBE_Chongdonkbu_Long
+                name = IBE_Chongdokbu
+                }
+				set_party_name = { 
+                ideology = fascism 
+                long_name = IBE_Chongdonkbu_Long
+                name = IBE_Chongdokbu
+                }
+				set_party_name = { 
+                ideology = neutrality 
+                long_name = IBE_Chongdonkbu_Long
+                name = IBE_Chongdokbu
+                }
+				set_party_name = { 
+                ideology = communism 
+                long_name = IBE_Chongdonkbu_Long
+                name = IBE_Chongdokbu
+                }
+				every_unit_leader = {
+					limit = {
+						has_id = 102
+					}
+					set_nationality = LAI
+				}
+				remove_ideas = FRA_victors_of_wwi
+				remove_ideas = FRA_disjointed_government
+				remove_ideas = FRA_protected_by_the_maginot_line
+				remove_ideas = FRA_political_violence
+				remove_state_core = 917
+				remove_state_core = 459
+				remove_state_core = 460
+				remove_state_core = 931
+				remove_state_core = 932
+				remove_state_core = 934
+				remove_state_core = 513
+				remove_state_core = 933
+				remove_state_core = 514
+				remove_state_core = 1
+				remove_state_core = 735
+			}
+		}
+	}
+}

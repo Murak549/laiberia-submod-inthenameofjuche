@@ -11,16 +11,28 @@ state={
 
 	history={
 		owner = PRK
+		JAP = {
+			set_province_controller = 4052
+		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
+			3981 = {
+				naval_base = 4 # 3
+			}
+			4052 = {
+				naval_base = 4 # 3
+			}
+			1003 = {
+				naval_base = 4 # 3
+			}
 		}
 		
 		victory_points = {
 			3981 5
 		}	
 		victory_points = {
-			10065 5
+			10065 15
 		}	
 		victory_points = {
 			11775 1

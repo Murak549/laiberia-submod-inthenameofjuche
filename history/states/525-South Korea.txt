@@ -8,10 +8,24 @@ state={
 		buildings = {
 			infrastructure = 2
 			arms_factory = 1
-
+			7221 = {
+				naval_base = 4 # 3
+			}
+			10110 = {
+				naval_base = 4 # 3
+			}
+			1054 = {
+				naval_base = 4 # 3
+			}
+			11992 = {
+				naval_base = 4 # 3
+			}
 		}
 		victory_points = {
 			7125 5 # 3 
+		}
+		JAP = {
+			set_province_controller = 7125
 		}
 		victory_points = {
 			7204 3

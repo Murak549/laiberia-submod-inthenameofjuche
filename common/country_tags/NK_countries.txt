@@ -1,2 +1,1 @@
 PRK = "countries/Korea.txt"
-SAR = "countries/France.txt"

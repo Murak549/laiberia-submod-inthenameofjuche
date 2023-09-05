@@ -1,19 +1,27 @@
 #reload countrycolors
-FAL = { # 프랑스 알제리
-	color = rgb { 45 70 125 }
-	color_ui = rgb { 45 70 125 }
-}
-EIR = { # 아일랜드 자유국
-	color = rgb { 160  20  15 }
-	color_ui = rgb { 190  20  15 }
+PRK = {
+	color = rgb { 230 27 38 }
+	color_ui = rgb { 230 27 38 }
 }
 LAI = {
 	color = rgb { 255 222 94 }
 	color_ui = rgb { 255 222 94 }
 }
-SAR = {
-	color = rgb { 160  160  160 }
-	color_ui = rgb { 160  160  160 }
+OST = {
+	color = rgb { 180 220 190 }
+	color_ui = rgb { 180 220 190 }
+}
+FFR = {
+  color = rgb { 80 150 179 }
+  color_ui = rgb { 89 219 220 }
+}
+MAD = {
+	color = rgb { 222 187 91 }
+	color_ui = rgb { 222 187 91 }
+}
+LIS = {
+	color = rgb { 76 145 63 }
+	color_ui = rgb { 76 145 63 }
 }
 GER = {
 	color = HSV { 0.1 0.15 0.4 }
@@ -32,8 +40,8 @@ SWE = {
 	color_ui = rgb { 47 172 255 }
 }
 FRA = {
-	color = rgb { 57 113 228 }
-	color_ui = rgb { 74 147 255 }
+	color = rgb { 45 70 125 }
+	color_ui = rgb { 45 70 125 }
 }
 LUX = {
 	color = rgb { 65 175 179 }
@@ -49,6 +57,10 @@ CZE = {	color = rgb { 54 167 156 }
 		color_ui = rgb { 70 217 203 }
 }
 POL = {
+	color = rgb { 214 102 139 }
+	color_ui = rgb { 255 120 138 }
+}
+GPO = {
 	color = rgb { 214 102 139 }
 	color_ui = rgb { 255 120 138 }
 }
@@ -92,10 +104,6 @@ TUR = {
 	color = rgb { 169 17 1 }
 	color_ui = rgb { 169 17 1 }
 }
-#TUR = {
-#	color = rgb { 171 190 152 }
-#	color_ui = rgb { 222 247 198 }
-#}
 GRE = {
 	color = rgb { 93 181 227 }
 	color_ui = rgb { 121 235 255 }
@@ -112,9 +120,13 @@ DEN = {
 	color = rgb { 153 116 93 }
 	color_ui = rgb { 199 151 121 }
 }
+GDE = {
+	color = rgb { 153 116 93 }
+	color_ui = rgb { 199 151 121 }
+}
 BUL = {
 	color = rgb { 51 155 0 }
-	color_ui = rgb { 51 155 0 }
+	color_ui = rgb { 210 147 217 }
 }
 POR = {
 	color = rgb { 39 116 70 }
@@ -141,13 +153,9 @@ ARG = {
 	color_ui = rgb { 189 204 255 }
 }
 AST = {
-	color = rgb { 140 175 115 }
-	color_ui = rgb { 140 175 115 }
+	color = rgb { 57 143 97 }
+	color_ui = rgb { 74 186 126 }
 }
-# AST = {
-# 	color = rgb { 57 143 97 }
-# 	color_ui = rgb { 74 186 126 }
-# }
 BHU = {
 	color = rgb { 172 122 88 }
 	color_ui = rgb { 172 122 88 }
@@ -157,28 +165,20 @@ BOL = {
 	color_ui = rgb { 255 234 177 }
 }
 BRA = {
-	color = rgb { 134 157 55 }
-	color_ui = rgb { 134 157 55 }
+	color = rgb { 76 145 63 }
+	color_ui = rgb { 99 189 82 }
 }
-# BRA = { 
-# 	color = rgb { 76 145 63 }
-# 	color_ui = rgb { 99 189 82 }
-# }
 CAN = {
-	color = rgb { 109 55 45 }
-	color_ui = rgb { 109 55 45 }
+	color = rgb { 233  59  59 }
+	color_ui = rgb { 155 62 51 }
 }
-# CAN = {
-# 	color = rgb { 233  59  59 }
-# 	color_ui = rgb { 155 62 51 }
-# }
-CHI = { #
-	color = rgb { 51 102 153 }
-	color_ui = rgb { 51 102 153 }
+QUE = {
+    color = rgb { 35 11 128 }
+	color_ui = rgb { 35 11 128 }
 }
-CH1 = {
-	color = hsv { 0.18 0.6 0.9 } #255 244 190
-	color_ui = hsv { 0.18 0.3 0.9 }
+CHI = {
+	color = rgb { 0 76 153 }
+	color_ui = rgb { 0 76 153 }
 }
 CHL = {
 	color = rgb { 155 101 107 }
@@ -225,13 +225,9 @@ LIB = {
 	color_ui = rgb { 198 169 248 }
 }
 MEX = {
-	color = rgb { 85 118 91 }
-	color_ui = rgb { 85 118 91 }
+	color = rgb { 104 152 83 }
+	color_ui = rgb { 135 198 108 }
 }
-# MEX = {
-# 	color = rgb { 104 152 83 }
-# 	color_ui = rgb { 135 198 108 }
-# }
 NEP = {
 	color = rgb { 152 130 191 }
 	color_ui = rgb { 198 169 248 }
@@ -292,10 +288,6 @@ YUN = {
 	color = rgb { 114 148 80 }
 	color_ui = rgb { 222 247 198 }
 }
-# USA = {
-# 	color = rgb { 100 138 190 }
-# 	color_ui = rgb { 100 138 190 }
-# }
 USA = {
 	color = rgb { 20 133 237 }
 	color_ui = rgb { 87 160 255 }
@@ -310,8 +302,8 @@ MEN = {
 	color_ui = rgb { 165  230  132 }
 }
 TAN = {
-	color = rgb { 152 130 191 }
-	color_ui = rgb { 198 169 248 }
+	color = rgb { 125 13 24 }
+	color_ui = rgb { 163 17 31 }
 }
 PAR = {
 	color = rgb { 57 113 228 }
@@ -412,8 +404,8 @@ ICE = {
 }
 
 UKR = {
-	color = rgb { 0  80  230 }
-	color_ui = rgb { 0  80  230 }	
+	color = rgb { 179 45 0 }
+	color_ui = rgb { 179 45 0 }
 }
 
 AZR = {
@@ -465,9 +457,13 @@ BLR = {
 	color = rgb { 180 220 190 }
 	color_ui = rgb { 180 220 190 }
 }
-MAN = {
-	color = rgb { 255 120 71 }
-	color_ui = rgb { 255 120 71 }
+#MAN = { #ORIGIN
+#	color = rgb { 255 120 71 }
+#	color_ui = rgb { 255 120 71 }
+#}
+MAN = { ###### FNG
+	color = rgb { 209 177 83 }
+	color_ui = rgb { 209 177 83 }
 }
 ANG = {
 	color = rgb { 37 140 61 }
@@ -502,13 +498,13 @@ PAK = {
 #    color = rgb { 195 236 230 } # The colors are set to be more are less what we are used to
 #    color_ui = rgb { 225 255 255 }
 #}
-DDR = {
-    color = rgb { 120 150 80 }
-    color_ui = rgb { 150 180 120 }
-}
+#DDR = {
+#    color = rgb { 120 150 80 }
+#    color_ui = rgb { 150 180 120 }
+#}
 KOR = {
-	color = rgb { 2 77 157 }
-	color_ui = rgb { 2 77 157 }	
+	color = rgb { 0 51 153 }
+	color_ui = rgb { 0 51 153 }	
 }
 ISR = {
 	color = rgb { 152  130  191 }
@@ -918,7 +914,15 @@ TTS = {
 	color = rgb { 230 230 0 }
 	color_ui = rgb { 179 179 0 }
 }
-PRK = {
-	color = rgb { 230 27 38 }
-	color_ui = rgb { 230 27 38 }
+LAI = {
+	color = rgb { 255 222 94 }
+	color_ui = rgb { 255 222 94 }
+}
+FAL = { # 프랑스 알제리
+	color = rgb { 45 70 125 }
+	color_ui = rgb { 45 70 125 }
+}
+EIR = { # 아일랜드 자유국
+	color = rgb { 160  20  15 }
+	color_ui = rgb { 190  20  15 }
 }
