@@ -1,0 +1,387 @@
+﻿add_namespace = sta
+
+## 스타트 이벤뜨 ##
+
+country_event = {
+	id = sta.1
+	title = sta.1.t
+	desc = sta.1.d
+	picture = GFX_report_event_LAI_welcome
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sta.1.a
+		hidden_effect = {
+		every_owned_state = { # 아니시발 내 자치주 페널티 돌려줘요
+				limit = {
+					OR = {
+						state = 165
+						state = 171
+						state = 792
+					}
+				}
+				add_dynamic_modifier = { modifier = autonomous_state }
+			}
+			
+		every_owned_state = { # 중화민국 군벌 페널티
+				limit = {
+					OR = {
+						state = 591
+						state = 592
+						state = 593
+						state = 594
+						state = 599
+						state = 602
+						state = 603
+						state = 748
+						state = 325
+						state = 747
+						state = 751
+						state = 752
+						state = 605
+						state = 750
+						state = 620
+						state = 606
+						state = 604
+						state = 754
+						state = 755
+						state = 616
+						state = 756
+						state = 753
+						state = 283
+						state = 744
+						state = 622
+						state = 615
+						state = 607
+						state = 598
+						state = 597
+						state = 743
+						state = 614
+						state = 608
+					}
+				}
+				add_dynamic_modifier = { modifier = chinese_autonomous_state }
+			}
+		}
+	}
+	option = {
+	    name = sta.1.b
+		country_event = {  ## 다른 모더들은 발로도 하는걸 못하는 뉴비모더의 슬픔..
+		id = sta.2 
+		}
+		hidden_effect = {
+		every_owned_state = { # 아니시발 내 자치주 페널티 돌려줘요
+				limit = {
+					OR = {
+						state = 165
+						state = 171
+						state = 792
+					}
+				}
+				add_dynamic_modifier = { modifier = autonomous_state }
+			}
+			
+		every_owned_state = { # 중화민국 군벌 페널티
+				limit = {
+					OR = {
+						state = 591
+						state = 594
+						state = 599
+						state = 602
+						state = 603
+						state = 748
+						state = 325
+						state = 747
+						state = 751
+						state = 752
+						state = 605
+						state = 750
+						state = 620
+						state = 606
+						state = 604
+						state = 754
+						state = 755
+						state = 616
+						state = 756
+						state = 753
+						state = 283
+						state = 744
+						state = 622
+						state = 615
+						state = 607
+						state = 598
+						state = 597
+						state = 743
+						state = 614
+						state = 608
+					}
+				}
+				add_dynamic_modifier = { modifier = chinese_autonomous_state }
+			}
+		}
+	}  
+}
+
+## 스토리 이벤트 ##
+
+country_event = {
+	id = sta.2
+	title = sta.2.t
+	desc = sta.2.d
+	picture = GFX_report_event_LAI_welcome
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sta.2.a
+	}
+}
+
+## 바닐라와의 변경점 이벤트 ##
+
+country_event = {
+	id = sta.3
+	title = sta.3.t
+	desc = sta.3.d
+	picture = GFX_report_event_LAI_welcome
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sta.3.a
+	}
+}
+
+## 비오 12세 즉위 ##
+
+country_event = {
+	id = sta.10
+	title = sta.10.t
+	desc = sta.10.d
+	picture = GFX_report_event_LAI_welcome
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sta.10.a
+		create_country_leader = {
+						name = "비오 12세"
+						desc = ""
+						picture = GFX_portrait_BIO_XII
+						expire = "1985.1.1"
+						ideology = despotism
+						traits = {
+						}
+					}
+	}
+}
+
+## 섭정 즉위 ##
+
+country_event = {
+	id = sta.11
+	title = sta.11.t
+	desc = sta.11.d
+	picture = GFX_report_event_LAI_welcome
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sta.10.a
+		create_country_leader = {
+						name = "레페트 파샤"
+						desc = ""
+						picture = GFX_portrait_tur_refe_pasha
+						expire = "1985.1.1"
+						ideology = despotism
+						traits = {
+						Supjoung
+						}
+					}
+		add_ideas = TUR_WOMAN_SULTAN
+	}
+}
+
+
+## 섭정 즉위 ##
+
+country_event = {
+	id = sta.12
+	title = sta.12.t
+	desc = sta.12.d
+	picture = GFX_report_event_SOV_purge_third_moscow_trial
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sta.12.a
+		add_stability = -0.05
+	}
+}
+
+## 스웨덴-노르웨이 해체 ##
+
+country_event = {
+	id = sta.13
+	title = sta.13.t
+	desc = sta.13.d
+	picture = GFX_report_event_LAI_welcome
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sta.13.a
+		SWE = { 
+	    set_autonomy = { target = NOR autonomy_state = autonomy_free } 
+		remove_ideas = NORSWE_idea_sweden_norway_kingdom
+		remove_ideas = NORSWE_idea_our_bad_2
+		drop_cosmetic_tag = yes
+	    }
+		NOR = { 
+		remove_ideas = NORSWE_idea_sweden_norway_kingdom
+		remove_ideas = NORSWE_idea_our_bad_1
+		drop_cosmetic_tag = yes
+		add_stability = 0.2
+		add_war_support = -0.5
+	    }
+		set_province_name = { # reset_province_name이 작동을 안한다 씨발!
+          id = 6115
+          name = "오슬로"
+       }
+		news_event = { id = lai_news.19 hours = 3 }
+	}
+}
+
+
+
+## ㅈ랑스 ##
+
+## 프랑스 이벤트파일은 필요없다 ##
+
+country_event = {
+	id = sta.1938
+	title = sta.1938.t
+	desc = sta.1938.d
+	picture = GFX_report_event_france_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sta.1938.a
+		hidden_effect = {
+		  FAL = {
+		    load_focus_tree = nothing # 어딜 산업루트 타먹으려고 ㅋㅋ
+		    country_event = {
+		    id = sta.1939 hours = 2
+		    }
+			country_event = {
+		    id = sta.1940 days = 9
+		    }
+		  }
+		}
+		custom_effect_tooltip = LAI_algeria_banaran_readys
+		FAL = {
+		give_military_access = FRA
+		set_party_name = { 
+               ideology = democratic 
+               long_name = FRA_ARMY_long
+               name = FRA_ARMY
+              }
+		set_cosmetic_tag = FRENCH_ALGERIA_MILITARY
+		 set_rule = { can_guarantee_other_ideologies = no }
+		 set_rule = { can_force_government = no }
+		 set_rule = { can_create_collaboration_government = no }
+		 add_ideas = jungrip_army
+		create_country_leader = {
+						name = "막심 베이강"
+						desc = ""
+						picture = gfx/leaders/FRA/Portrait_France_Maxime_Weygand.dds
+						expire = "1965.1.1"
+						ideology = liberalism
+						traits = {
+						}
+					}
+		transfer_state = 460
+		transfer_state = 459
+		transfer_state = 513
+		transfer_state = 514
+		transfer_state = 931
+		transfer_state = 932
+		transfer_state = 933
+		transfer_state = 934
+		transfer_state = 917
+		933 = { set_demilitarized_zone = yes }
+		932 = { set_demilitarized_zone = yes }
+        459 = { set_demilitarized_zone = yes }
+		934 = { set_demilitarized_zone = yes }
+		every_state = {
+				limit = {
+					is_core_of = ALG
+				}
+				add_core_of = FAL
+			}
+		}
+		if = {
+		  limit = {
+		  has_completed_focus = FRA_the_blum_viollette_proposal
+		  }
+		  every_state = {
+				limit = {
+					is_core_of = ALG
+				}
+				remove_core_of = FRA
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sta.1939
+	title = sta.1939.t
+	desc = sta.1939.d
+	picture = GFX_report_event_LAI_welcome
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sta.1939.a
+		load_oob = "FAL_legacy"
+	}
+}
+
+country_event = {
+	id = sta.1940
+	title = sta.1940.t
+	desc = sta.1940.d
+	picture = GFX_report_event_LAI_welcome
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sta.1940.a
+		news_event = {
+		id = lai_news.1938 hours = 3
+		}
+		933 = { set_demilitarized_zone = no }
+		932 = { set_demilitarized_zone = no }
+        459 = { set_demilitarized_zone = no }
+		934 = { set_demilitarized_zone = no }
+		ALG = {
+		set_cosmetic_tag = FREE_algerian_leberate_army
+		add_ideas = FREE_algeria
+		transfer_state = 933
+		transfer_state = 932
+		transfer_state = 459
+		transfer_state = 934
+		transfer_state = 514
+		load_oob = "algerian_bongi_legacy"
+		}
+		declare_war_on = {
+		      target = ALG
+			  type = take_state_focus
+			  generator = { 933 932 459 934 }
+			}
+		set_country_flag = algerian_banaran
+	}
+}

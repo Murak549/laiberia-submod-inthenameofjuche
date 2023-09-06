@@ -42,10 +42,11 @@ chinese_autonomous_state = { #State Modifier, 중국 군벌
 	icon = GFX_modifiers_sabotaged_resource
 	
 	local_supply_impact_factor = 1.0
+	resistance_growth = 0.3
 	disable_strategic_redeployment = 1
-	state_resources_factor = -0.96
+	state_resources_factor = -1
 	local_manpower = -1
-	local_building_slots_factor = -0.75
+	local_building_slots_factor = -1
 	local_factories = -1
-	army_speed_factor_for_controller = -0.75
+	army_speed_factor_for_controller = -0.95
 }

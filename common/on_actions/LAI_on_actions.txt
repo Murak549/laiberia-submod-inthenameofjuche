@@ -2,6 +2,22 @@ on_actions = {
     ## 스타트 이벤트
     on_startup = {
 		effect = {
+			TIB = { ###OOB 귀찮아
+				every_owned_state = {
+					create_unit = {
+						division = "division_template = \"Juntuan\" start_experience_factor = 0.5"
+						owner = TIB
+					}
+				}
+			}
+			JAP = { ###OOB 귀찮아
+				every_owned_state = {
+					create_unit = {
+						division = "division_template = \"Chuton-chi Shidan\" start_experience_factor = 0.5"
+						owner = JAP
+					}
+				}
+			}
 			every_country = {
                 country_event = {
                     id = sta.1

@@ -15,7 +15,40 @@ JAP_kwantung = {
 		}
 		icon = mission_icon     # For GFX_decision_mission_icon
 		is_good = no
-		days_mission_timeout = 100
+		days_mission_timeout = 40
+		complete_effect = {
+
+		}
+		timeout_effect = {
+			JAP = {
+				white_peace = {
+					tag = PRK
+					message = prk_white_peace_ja
+				}
+				declare_war_on = {
+					target = MAN
+					type = puppet_wargoal_focus 
+				}
+			}
+		}
+	}
+	JAP_suckmanchu2 = {
+		activation = {
+			focus_progress = {
+				focus = JAP_support_the_kodoha_faction
+				progress > 0.0
+			}
+		}
+		fire_only_once = yes
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			
+		}
+		icon = mission_icon     # For GFX_decision_mission_icon
+		is_good = no
+		days_mission_timeout = 140
 		complete_effect = {
 
 		}
@@ -23,6 +56,45 @@ JAP_kwantung = {
 			JAP = {
 				declare_war_on = {
 					target = MAN
+					type = puppet_wargoal_focus 
+				}
+			}
+		}
+	}
+	JAP_suck_mongolia = {
+		activation = {
+			focus_progress = {
+				focus = JAP_non_aggression_pact_with_china
+				progress > 0.0
+			}
+		}
+		fire_only_once = yes
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			
+		}
+		icon = mission_icon     # For GFX_decision_mission_icon
+		is_good = no
+		days_mission_timeout = 30
+		complete_effect = {
+
+		}
+		timeout_effect = {
+			MEN = {
+				add_state_core = 820
+				add_state_core = 819
+				add_state_core = 818
+				add_state_core = 817
+				add_state_core = 330
+			}
+			MON = {
+				leave_faction = yes
+			}
+			JAP = {
+				declare_war_on = {
+					target = MON
 					type = puppet_wargoal_focus 
 				}
 			}

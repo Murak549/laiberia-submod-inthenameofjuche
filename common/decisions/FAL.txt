@@ -1,0 +1,975 @@
+#Category allowed for FAR AND POL AND CHI UND FIN kkkkk
+BACK_TO_THE_FRANCCEE = {
+	BACK_TO_THE_FRANCE = {
+
+		icon = SOV_exiles_state
+
+		allowed = {
+			always = yes
+		}
+		priority = 9999
+
+		available = {
+		    NOT = {
+			has_war_with = ALG
+			}
+			has_country_flag = algerian_banaran
+		}
+
+		days_remove = 10
+		
+		cost = 0
+		
+		fire_only_once = yes
+
+		complete_effect = {
+			FRA = {
+			annex_country = { target = FAL }
+			}
+			news_event = {
+			id = lai_news.1939 hours = 3
+			}
+			every_state = {
+				limit = {
+					is_core_of = ALG
+				}
+				remove_core_of = FAL
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+
+## 프랑스 공화국 - 이베리아 침공
+
+operations = {
+
+	FRA_attack_iberian = {
+
+		icon = spr_political_assassination
+
+		allowed = { 
+		original_tag = FRA 
+		always = no
+		}
+		
+		available = {
+			165 = { is_controlled_by_ROOT_or_ally = yes }
+			176 = { is_controlled_by_ROOT_or_ally = yes }
+			167 = { is_controlled_by_ROOT_or_ally = yes }
+			789 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		visible = {
+		}
+		
+		days_mission_timeout = 90
+		
+		is_good = no
+		
+		cost = 0
+
+	    fire_only_once = yes
+		
+		activation = {
+			always = no
+		}
+		
+		complete_effect = {
+		add_stability = 0.2
+		LAI = { country_event = { id = lai.48 hours = 3 } }
+		LAI = { add_war_support = -1 }
+		LAI = { complete_national_focus = lose_at_the_war }
+		remove_ideas = FRA_attack_iberia
+		set_global_flag = FRA_offensive_sucksecks
+		}
+		
+		timeout_effect = {
+	    add_stability = -0.2
+		add_war_support = -0.2
+		LAI = { country_event = { id = lai.49 hours = 3 } }
+		remove_ideas = FRA_attack_iberia
+		add_timed_idea = {
+				idea = FRA_ARMY_SAGI_DEAD
+				days = 360
+			}
+		set_global_flag = FRA_offensive_fails
+		}
+	}
+}
+
+## 이베리아 - 프랑스 반격
+
+operations = {
+
+	LAI_its_time_to_bangyuk = {
+
+		icon = spr_political_assassination
+
+		allowed = { 
+		original_tag = LAI 
+		always = no
+		}
+		
+		available = {
+			19 = { is_controlled_by_ROOT_or_ally = yes }
+			33 = { is_controlled_by_ROOT_or_ally = yes }
+			22 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		visible = {
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 33 
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		
+		days_mission_timeout = 180
+		
+		is_good = no
+		
+		cost = 0
+
+	    fire_only_once = yes
+		
+		activation = {
+			always = no
+		}
+		
+		complete_effect = {
+		add_stability = 0.2
+		add_war_support = 0.2
+		country_event = { id = lai.50 hours = 3 } 
+		country_event = { id = lai.55 days = 1 }
+		LAI = { white_peace = FRA }
+		FRA = { add_war_support = -1 }
+		16 = { set_demilitarized_zone = yes }
+		remove_ideas = LAI_its_tim_to_offensive
+		news_event = { id = lai_news.15 days = 1 }
+		if = {
+		    limit = {
+		    is_in_faction_with = ITA
+		    } 
+	    	LAI = { remove_from_faction = ITA }
+			ITA = { country_event = { id = lai.54 days = 1 } }
+			ITA = { white_peace = FRA }
+		}
+		set_global_flag = LAI_bangyuk_yes
+		LAI = { complete_national_focus = win_at_the_war }
+		}
+		
+		timeout_effect = {
+		country_event = { id = lai.51 hours = 3 } 
+		remove_ideas = LAI_its_tim_to_offensive
+		news_event = { id = lai_news.16 days = 1 }
+		LAI = { white_peace = FRA }
+		if = {
+		    limit = {
+		    is_in_faction_with = ITA
+		    } 
+	    	LAI = { remove_from_faction = ITA }
+			ITA = { white_peace = FRA }
+		}
+		set_global_flag = LAI_FRA_backto_war
+		LAI = { complete_national_focus = ssamssam_at_the_war }
+		}
+	}
+}
+
+
+## 지명 다시 변경
+
+political_actions = {
+	NOT_KRAKOW_YES_KRAKOV_LOL_IDKSRY = {
+
+		icon = SOV_exiles_state
+
+		allowed = {
+			tag = POL
+		}
+		priority = 9999
+
+		available = {
+		    has_global_flag = GPO_IS_HERE
+			GPO = { exists = no } 
+		}
+
+		days_remove = 0
+		
+		cost = 0
+		
+		fire_only_once = yes
+
+		complete_effect = {
+			set_province_name = { id = 3544 name = "바르샤바"}
+		    10 = { set_state_name = "바르샤바" }
+			set_province_name = { id = 9427 name = "크라쿠프"}
+		    88 = { set_state_name = "크라쿠프" }
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				GER = { has_government = democratic } # 민주독일 레벤스라움을 응원합니다
+			}
+		}
+	}
+}
+
+## 군벌들 해체
+
+political_actions = {
+	GUNBULS_PLZ_WE_GOONNA_FIGHT = {
+
+		icon = jap_conquer_china
+
+		allowed = {
+			tag = CHI
+		}
+		priority = 8000
+
+		available = {
+		    OR = {
+		    date > 1937.1.15
+			has_war_with = JAP
+			}
+		}
+
+		days_remove = 120
+		
+		cost = 20
+		
+		fire_only_once = yes
+
+		days_remove = 720
+
+        complete_effect = {
+		    add_stability = -0.1
+			add_war_support = 0.1
+			add_timed_idea = {
+				idea = CHI_gunbuls_juhangs
+				days = 120
+			}
+		}
+		remove_effect = {
+			every_owned_state = {
+				remove_dynamic_modifier = { modifier = chinese_autonomous_state }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	
+	CHI_GINGUP_ARMY_BOKSA = {
+
+		icon = jap_conquer_china
+
+		allowed = {
+			tag = CHI
+		}
+		priority = 7800
+
+		available = {
+		has_war_with = JAP
+		}
+
+		days_remove = 20
+		
+		cost = 0
+		
+		fire_only_once = yes
+
+        remove_effect = {
+		random_owned_controlled_state = {
+				 limit = { ROOT = { has_full_control_of_state = PREV } }
+				 prioritize = { 605 }
+				 create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				create_unit = {
+					 division = "name = \"I. Chinese Miliatry Shidan\" division_template = \"Sanjiao Jun\" #  start_experience_factor = 0.4" 
+					 owner = CHI
+				    }
+				add_equipment_to_stockpile = {
+			    type = infantry_equipment_0 #type of equipment, from file
+			    amount = 20000 #amount
+			    producer = CHI #Name of country that "built" the equipment
+		        }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
+
+## 계속전쟁과 독일에 선전포고
+# 시발 on_actions 외않된데??
+
+political_actions = {
+	DECLARE_WAR_IN_SOV = {
+
+		icon = decision_category_generic_independence
+
+		allowed = {
+			tag = FIN
+		}
+		priority = 9999
+
+		available = {
+		    has_global_flag = FIN_WINTER_WAR
+			NOT = { has_war_with = SOV }
+			date > 1941.6.20
+			GER = { has_war_with = SOV }
+		}
+
+		days_remove = 5
+		
+		cost = 0
+		
+		fire_only_once = yes
+
+		complete_effect = {
+	    declare_war_on = {
+	     target = SOV
+		 type = take_state_focus
+		 generator = { 146 147 }
+		}
+	    GER = { add_to_faction = FIN }
+		set_global_flag = FIN_CONTINUE_WAR
+		news_event = { id = lai_news.1017 hours = 6 }
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	
+	PEACE_WITH_SOV = {
+
+		icon = decision_category_generic_independence
+
+		allowed = {
+			tag = FIN
+		}
+		priority = 9900
+
+		available = {
+		    has_global_flag = FIN_CONTINUE_WAR
+			OR = {
+	        has_war_with = ENG 
+	        has_war_with = FRA
+	        has_war_with = SOV
+	        has_war_with = USA
+	        }
+			GER = { surrender_progress > 0.2 }
+		}
+
+		days_remove = 7
+		
+		cost = 0
+		
+		fire_only_once = yes
+
+		complete_effect = {
+	    GER = { remove_from_faction = FIN }
+	    FIN = {  
+	    declare_war_on = {
+	    target = GER
+	    type = take_state_focus
+	    generator = { 924 }
+	    }
+	    add_popularity = {
+    	ideology = communism
+	    popularity = 0.15
+        }
+   	    white_peace = ENG
+        white_peace = FRA
+        white_peace = USA	
+	    white_peace = SOV
+		white_peace = LAI
+	    }
+	    if = {
+		limit = {
+		SOV = { exists = yes }
+		NOT = { has_global_flag = SOV_surrendereds }
+		}
+		SOV = { transfer_state = 722 }
+		}
+	    ENG = { add_to_faction = FIN }
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
+
+## 그리스령 중앙마케도니아 재수복
+# 시발 on_actions 외않된데??
+
+political_actions = {
+	CENTRAL_MACEDONIA_SUBOK = {
+
+		icon = decision_category_generic_independence
+
+		allowed = {
+			tag = GRE
+		}
+		priority = 9999
+
+		available = {
+		    has_war_with = BUL
+			731 = { 
+			is_core_of = BUL 
+			}
+			BUL = {
+			NOT = { controls_state = 731 }
+			}
+			controls_state = 731
+		}
+
+		days_remove = 0
+		
+		cost = 0
+		
+		fire_only_once = yes
+
+		complete_effect = {
+	    transfer_state = 731
+		731 = { add_core_of = GRE }
+		731 = { remove_core_of = BUL }
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
+
+## 루마니아의 헝가리 동부 할양
+political_actions = {
+	ROMANIA_UNGARN_PACT_ILGA = {
+
+		icon = decision_category_generic_independence
+
+		allowed = {
+			tag = ROM
+		}
+		priority = 9999
+
+		available = {
+		    NOT = { has_war_with = HUN }
+			controls_state = 154
+			date > 1936.9.2
+		}
+
+		days_remove = 0
+		
+		cost = 0
+		
+		fire_only_once = yes
+
+		complete_effect = {
+	    HUN = { transfer_state = 154 }
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
+
